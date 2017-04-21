@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  
+  foodlane-couchdb:
+    image: couchdb:latest
+    environment:
+      COUCHDB_USER: admin
+      COUCHDB_PASSWORD: my_admin_password
+    ports: 
+      - 5984:5984
+
+  foodlane-restapi:
+    build: ./restapi
+    volumes:
+      - ./restapi:/src/usr/app
+    ports:
+      - 3000:3000
+    depends_on:
+      - foodlane-couchdb
