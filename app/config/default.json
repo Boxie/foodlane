@@ -1,15 +1,17 @@
 {
-  // foodlane server config
-  "Foodlane": {
+  // foodlane app config
+  "foodlane": {
     "serverConfig": {
-      "port": 3000
+      "NODE_PORT": 3000
     },
     "dbConfig": {
-      "host": "localhost",
+      "protocol": "http",
+      "host": "foodlane-couchdb",
       "username": "admin",
       "password": "my_admin_password",
       "port": 5984,
-      "dbName": "foodlane"
+      "database": "foodlane",
+      "sampleData": true
     },
     "auth": {
       "secret": "mysecret",
