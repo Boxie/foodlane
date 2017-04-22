@@ -1,0 +1,20 @@
+{
+  // foodlane server config
+  "Foodlane": {
+    "serverConfig": {
+      "port": 3000
+    },
+    "dbConfig": {
+      "host": "localhost",
+      "username": "admin",
+      "password": "my_admin_password",
+      "port": 5984,
+      "dbName": "foodlane"
+    },
+    "auth": {
+      "secret": "mysecret",
+      "cookie-name": "session",
+      "duration": 31536000 // session vaild duration - 1 year
+    }
+  }
+}

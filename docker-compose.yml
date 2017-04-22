@@ -10,10 +10,10 @@ services:
     ports: 
       - 5984:5984
 
-  foodlane-restapi:
-    build: ./restapi
+  foodlane-server:
+    build: ./app
     volumes:
-      - ./restapi:/src/usr/app
+      - ./app:/opt/app
     ports:
       - 3000:3000
     depends_on:

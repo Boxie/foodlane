@@ -1,0 +1,26 @@
+{
+  "name": "Foodlane",
+  "version": "0.0.1",
+  "description": "CSA - project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon -L app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.3.0",
+    "change-case": "^3.0.1",
+    "client-sessions": "*",
+    "config": "*",
+    "express": "*",
+    "express-generator": "*",
+    "nano": "*",
+    "nodemon": "^1.9.2",
+    "passport": "0.3.2",
+    "passport-local": "*",
+    "require-dir": "^0.3.1",
+    "winston": "^2.3.1"
+  }
+}
