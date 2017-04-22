@@ -31,14 +31,14 @@ Foodlane is currently extended with the following plugins. Instructions on how t
 
 | Plugin | README |
 | ------ | ------ |
-| Change-case | [https://github.com/blakeembrey/change-case] |
-| client-sessions | [https://github.com/mozilla/node-client-sessions] |
-| config | [https://github.com/lorenwest/node-config] [PlGd] |
-| express | [http://expressjs.com/de/] [PlOd] |
-| express-generator | [http://expressjs.com/de/starter/generator.html] |
-| nano | [https://github.com/dscape/nano]  |
-| nodemon | [https://github.com/remy/nodemon] |
-| passport | [https://github.com/jaredhanson/passport] |
-| passport-local | [https://github.com/jaredhanson/passport-local] |
-| require-dir | [https://github.com/aseemk/requireDir] |
-| winston | [https://github.com/winstonjs/winston] |
+| Change-case | https://github.com/blakeembrey/change-case |
+| client-sessions | https://github.com/mozilla/node-client-sessions |
+| config | https://github.com/lorenwest/node-config |
+| express | http://expressjs.com/de/ |
+| express-generator | http://expressjs.com/de/starter/generator.html |
+| nano | https://github.com/dscape/nano |
+| nodemon | https://github.com/remy/nodemon |
+| passport | https://github.com/jaredhanson/passport |
+| passport-local | https://github.com/jaredhanson/passport-local |
+| require-dir | https://github.com/aseemk/requireDir |
+| winston | https://github.com/winstonjs/winston |
