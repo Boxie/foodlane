@@ -4,7 +4,7 @@
 
 ### Installation
 
-Foodlane requires [Docker](https://www.docker.com/) and [npm](https://www.npmjs.com/) run.
+Foodlane requires [Docker](https://www.docker.com/) and [npm](https://www.npmjs.com/) to run.
 
 Download the project and navigate to the project root directory.
 
@@ -12,12 +12,12 @@ Download the project and navigate to the project root directory.
 $ npm install
 ```
 
-After loading all project dependencies return to the project root directory, build docker-compose images and start docker-compose
+After loading all project dependencies return to the project root directory, build docker-compose images and start foodlane via docker-compose
 
 ```sh
 $ cd ..
-$ docker-compose build
-$ docker-compose up
+$ docker-compose build # build images
+$ docker-compose up # start servers
 ```
 
 Verify the installation by navigating to your server address in your preferred browser.
