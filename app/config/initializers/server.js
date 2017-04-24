@@ -23,6 +23,13 @@ var start =  function(cb) {
 
     app.use(express.static(path.join(__dirname, 'public')));
 
+    // Set PugJS as view engine
+    app.set('view engine', 'pug');
+
+    //set Paths
+    app.set("views", path.join(__dirname, "../../views"));
+    app.use(express.static(path.join(__dirname, '../../public')));
+
     app.listen(serverConfig.get('NODE_PORT'));
     logger.info('[SERVER] Listening on port ' + serverConfig.get('NODE_PORT'));
 

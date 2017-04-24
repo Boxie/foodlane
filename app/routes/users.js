@@ -2,6 +2,8 @@
  * Created by Lukas on 22.04.17.
  */
 
+var pug = require('pug');
+
 module.exports = function(router) {
     'use strict';
     // This will handle the url calls for /users/:user_id
@@ -21,7 +23,7 @@ module.exports = function(router) {
 
     router.route('/')
         .get(function(req, res, next) {
-            res.send("Hallo Welt!");
+
         }).post(function(req, res, next) {
         // Create new user
     });

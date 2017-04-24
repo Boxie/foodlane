@@ -1,0 +1,17 @@
+extends layouts/default.pug
+
+block content
+    div(class="container")
+        div(class="row")
+            form(action="/login", method="POST")
+                div(class="input-field col s12")
+                    input(id="email" type="email" class="validate" required)
+                    label(for="email") Email
+                div(class="input-field col s12")
+                    input(id="password" type="password" class="validate" required)
+                    label(for="password") Password
+                div(class="center")
+                    button(class="btn waves-effect waves-light" type="submit" name="action") Login
+                        i(class="material-icons right") send
+
+

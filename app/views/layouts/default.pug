@@ -1,0 +1,21 @@
+//- layout.pug
+html
+    head
+        title Foodlane - #{title}
+
+        //CSS Files
+        link(rel='stylesheet', href='/css/materialize.css')
+        link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
+        block links
+
+        script(src='js/jquery.js')
+        script(src='js/materialize.js')
+
+
+
+        block scripts
+    body
+        include ../partials/layout/navbar.pug
+        block content
+        include ../partials/layout/footer.pug
+
