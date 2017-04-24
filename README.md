@@ -9,6 +9,7 @@ Foodlane requires [Docker](https://www.docker.com/) and [npm](https://www.npmjs.
 Download the project and navigate to the project root directory.
 
 ```sh
+$ cd app
 $ npm install
 ```
 
@@ -23,7 +24,7 @@ $ docker-compose up # start servers
 Verify the installation by navigating to your server address in your preferred browser.
 
 ```sh
-localhost:8000
+localhost:3000
 ```
 ### Plugins
 
