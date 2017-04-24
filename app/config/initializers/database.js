@@ -38,7 +38,7 @@ module.exports = function(cb) {
                 // Generate sample Data
 
                 if(dbConfig.sampleData){
-                    require('../sampleData/dbSampleData')(cb);
+                    require('./sampleData/dbSampleData')(cb);
                 }
 
             });
