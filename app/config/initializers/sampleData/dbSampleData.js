@@ -2,22 +2,10 @@
  * Created by Lukas on 22.04.17.
  */
 
-var db = require('./../../../helpers/database');
-var logger = require('winston');
+var db = require("./../../../helpers/database");
+var logger = require("winston");
 
-var request = require('request');
-
-module.exports = function(cb) {
-
-
-    logger.info("[DATABSE] Filling database with sample data");
-
-    var sampleUsers = require('./users.json');
-    addUsers(sampleUsers);
-
-    logger.info("[DATABSE] Filled database with sample data SUCCESSFULLY");
-
-};
+var request = require("request");
 
 function addUsers(body){
 
@@ -40,3 +28,15 @@ function addUsers(body){
 
     });
 }
+
+module.exports = function(cb) {
+
+
+    logger.info("[DATABSE] Filling database with sample data");
+
+    var sampleUsers = require("./users.json");
+    addUsers(sampleUsers);
+
+    logger.info("[DATABSE] Filled database with sample data SUCCESSFULLY");
+
+};
