@@ -27,4 +27,30 @@ header
           |  
           i.material-icons close
 
-include modal.pug
+#login.modal
+  .modal-content
+    a.modal-action.modal-close.grey-text.right(href='#!')
+      i.material-icons clear
+    .container(style='padding-bottom: 50px;')
+      h3 Log In
+      form(action='#', method='POST')
+        .input-field
+          input#username.validate(type='text', name='username', required='')
+          |  
+          label(for='username') Username
+        .input-field
+          input#password.validate(type='password', name='password', required='')
+          |  
+          label(for='password') Password
+        |  
+        a.grey-text.left(href='/register') Register for free
+        |  
+        button.btn.waves-effect.waves-light.right(type='submit') Submit
+
+block on_document_js
+  script.
+      //Modal Initializer
+      $(document).ready(function(){
+          // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+          $('.modal').modal();
+        });
