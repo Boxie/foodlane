@@ -3,7 +3,10 @@
  */
 
 var express = require('express');
+var passport = require('passport');
+
 var path = require('path');
+
 // Local dependecies
 var config = require('config');
 var serverConfig = config.get('foodlane.serverConfig');
@@ -18,8 +21,11 @@ var start =  function(cb) {
     // Configure express
     app = express();
 
+    logger.info('[SERVER] Initializing passport');
+    require('../pass')(app, passport);
+
     logger.info('[SERVER] Initializing routes');
-    require('../../routes/index')(app);
+    require('../../routes/index')(app, passport);
 
     app.use(express.static(path.join(__dirname, 'public')));
 

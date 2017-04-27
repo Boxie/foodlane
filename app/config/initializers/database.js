@@ -2,12 +2,12 @@
  * Created by Lukas on 22.04.17.
  */
 
-var logger = require("winston");
-var config = require("config");
-var dbConfig = config.get("foodlane.dbConfig");
+var logger = require('winston');
+var config = require('config');
+var dbConfig = config.get('foodlane.dbConfig');
 var dbAddress = dbConfig.protocol + '://' + dbConfig.username + ':' + dbConfig.password + "@" + dbConfig.host + ':' + dbConfig.port;
 
-var nano = require("nano")(dbAddress)
+var nano = require('nano')(dbAddress)
 
 module.exports = function(cb) {
     'use strict';
@@ -29,11 +29,11 @@ module.exports = function(cb) {
 
                 // on error while creating
                 if(err){
-                    logger.error("[DATABASE] Failed to create Database \"" + dbConfig.database +"\"");
+                    logger.error('[DATABASE] Failed to create Database \"' + dbConfig.database +"\"");
                 }
 
                 // created Database successfully
-                logger.info("[DATABASE] Created database \"" + dbConfig.database +"\" SUCCESSFULLY");
+                logger.info('[DATABASE] Created database \"' + dbConfig.database +"\" SUCCESSFULLY");
 
                 // Generate sample Data
 
@@ -45,7 +45,7 @@ module.exports = function(cb) {
         }
     });
 
-    logger.info("[DATABASE] Initialized Database SUCCESSFULLY")
+    logger.info('[DATABASE] Initialized Database SUCCESSFULLY')
     // Return the call back
     cb();
 };
