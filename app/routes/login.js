@@ -6,7 +6,12 @@ module.exports = function(router, passport) {
 
     router.route('/')
         .get(function(req, res, next) {
-            res.render("login");
+            if(req.isAuthenticated()) {
+                console.log(req.user);
+                res.send("Hello " + req.user.first_name + " " + req.user.last_name);
+            } else {
+                res.render("login");
+            }
         }).post(function(req, res, next) {
         // The local login strategy
             passport.authenticate('local', function(err, user) {
@@ -16,7 +21,7 @@ module.exports = function(router, passport) {
 
                 // Technically, the user should exist at this point, but if not, check
                 if(!user) {
-                    res.status(500).send('Something broke!');
+                    res.redirect("/login");
                 }
 
                 // Log the user in!

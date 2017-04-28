@@ -13,10 +13,10 @@
       "database": "foodlane",
       "sampleData": true
     },
-    "auth": {
+    "authConfig": {
       "secret": "mysecret",
-      "cookie-name": "session",
-      "duration": 31536000 // session vaild duration - 1 year
+      "resave": true,
+      "saveUninitialized": false
     }
   }
 }

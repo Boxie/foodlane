@@ -12,10 +12,10 @@
   "dependencies": {
     "async": "^2.3.0",
     "change-case": "^3.0.1",
-    "client-sessions": "*",
     "config": "*",
     "express": "*",
     "express-generator": "*",
+    "express-session": "^1.15.2",
     "nano": "*",
     "nodemon": "^1.9.2",
     "passport": "0.3.2",
