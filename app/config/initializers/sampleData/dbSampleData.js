@@ -23,8 +23,8 @@ function addUsers(body){
 
     body.forEach(function (data){
         var user = {
-            "_id": data.email,
             "type": "user",
+            "email": data.email,
             "username": data.username,
             "password": data.password,
             "first_name": data.first_name,

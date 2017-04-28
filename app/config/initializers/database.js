@@ -9,6 +9,39 @@ var dbAddress = dbConfig.protocol + '://' + dbConfig.username + ':' + dbConfig.p
 
 var nano = require('nano')(dbAddress)
 
+function createViews(db){
+    db.insert(
+        { "views":
+            { "list_username":
+                { "map":
+                    function(doc) {
+                        if(doc.type === "user") {
+                            emit([doc.username], doc._id);
+                        }
+                    }
+                },
+                "list_email": {
+                    "map":
+                        function(doc) {
+                            if(doc.type === "user") {
+                                emit([doc.email], doc._id);
+                            }
+                        }
+                },
+                "username_password": {
+                    "map":
+                        function(doc) {
+                            if(doc.type === "user") {
+                                emit([doc.username,doc.password]);
+                            }
+                        }
+                },
+            }
+        }, '_design/users'
+
+    );
+}
+
 module.exports = function(cb) {
     'use strict';
     // Initialize the component here then call the callback
@@ -40,6 +73,8 @@ module.exports = function(cb) {
                 if(dbConfig.sampleData){
                     require('./sampleData/dbSampleData')(cb);
                 }
+
+                createViews(nano.db.use(dbConfig.database));
 
             });
         }
