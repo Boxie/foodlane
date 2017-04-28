@@ -11,8 +11,10 @@
   "license": "ISC",
   "dependencies": {
     "async": "^2.3.0",
+    "body-parser": "^1.17.1",
     "change-case": "^3.0.1",
     "config": "*",
+    "cookie-parser": "^1.4.3",
     "express": "*",
     "express-generator": "*",
     "express-session": "^1.15.2",
