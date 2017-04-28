@@ -32,12 +32,7 @@ module.exports = function(router, passport) {
                     console.log(user.username + ' just logged in ' + req.isAuthenticated());
                     req.session.user_id = req.user.id;
 
-                    if(user.username) {
-                        res.json({ success: 'Welcome ' + user.username + "!"});
-                        return next();
-                    }
-
-                    res.json({ success: 'Welcome!'});
+                    res.send("profile");
                     return next();
                 });
 
