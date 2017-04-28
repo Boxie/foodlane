@@ -32,10 +32,10 @@ module.exports = function(router, passport) {
                     console.log(user.username + ' just logged in ' + req.isAuthenticated());
                     req.session.user_id = req.user.id;
 
-                    res.send("profile");
+                    res.redirect("/profile");
                     return next();
                 });
-
+                res.send("ERROR");
             })(req, res, next);
         });
 
@@ -44,8 +44,9 @@ module.exports = function(router, passport) {
         .get(function(req, res, next) {
             if(req.isAuthenticated()) {
                 logout(req);
+                res.redirect("/");
             } else {
-                res.render("login");
+                res.redirect("login");
             }
         }).post(function(req, res, next) {
         // The local login strategy

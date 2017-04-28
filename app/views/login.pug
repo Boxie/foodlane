@@ -3,10 +3,10 @@ extends layouts/default.pug
 block content
     div(class="container")
         div(class="row")
-            form(action="/login", method="POST")
+            form(action="/auth/login", method="POST")
                 div(class="input-field col s12")
-                    input(id="email" name="username" type="text" class="validate" required)
-                    label(for="email") Username
+                    input(id="username" name="username" type="text" class="validate" required)
+                    label(for="username") Username
                 div(class="input-field col s12")
                     input(id="password" name="password" type="password" class="validate" required)
                     label(for="password") Password
