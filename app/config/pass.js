@@ -42,6 +42,7 @@ module.exports = function(app, passport) {
     var lookupUser = function (username, password, done) {
         User.checkCredentials(username, password, function (auth_user){
             if(auth_user){
+
                 return done(null, auth_user);
             }
             return done(null, false, {error: 'Incorrect username or password.'});

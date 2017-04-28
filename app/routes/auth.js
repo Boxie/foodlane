@@ -2,9 +2,9 @@ var pug = require('pug');
 
 module.exports = function(router, passport) {
     'use strict';
-    // This will handle the url calls for /users/:user_id
+    // This will handle the url calls for /login/ROUTE
 
-    router.route('/')
+    router.route('/login')
         .get(function(req, res, next) {
             if(req.isAuthenticated()) {
                 console.log(req.user);
@@ -38,4 +38,21 @@ module.exports = function(router, passport) {
 
             })(req, res, next);
         });
+
+    // route /logout
+    router.route('/logout')
+        .get(function(req, res, next) {
+            if(req.isAuthenticated()) {
+                logout(req);
+            } else {
+                res.render("login");
+            }
+        }).post(function(req, res, next) {
+        // The local login strategy
+        logout(req);
+    });
 };
+
+function logout(req){
+
+}

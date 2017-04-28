@@ -13,13 +13,13 @@ module.exports = function(cb) {
     logger.info("[DATABSE] Filling database with sample data");
 
     var sampleUsers = require('./users.json');
-    addUsers(sampleUsers);
-
-    logger.info("[DATABSE] Filled database with sample data SUCCESSFULLY");
+    addUsers(sampleUsers, function (){
+        logger.info("[DATABSE] Filled database with sample data SUCCESSFULLY");
+    });
 
 };
 
-function addUsers(body){
+function addUsers(body, cb){
 
     body.forEach(function (data){
         var user = {
@@ -39,4 +39,5 @@ function addUsers(body){
         db.insert(user);
 
     });
+    cb();
 }
