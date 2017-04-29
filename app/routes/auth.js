@@ -21,7 +21,8 @@ module.exports = function(router, passport) {
 
                 // Technically, the user should exist at this point, but if not, check
                 if(!user) {
-                    res.redirect("/login");
+                    res.redirect("/auth/login");
+                    return next();
                 }
 
                 // Log the user in!
