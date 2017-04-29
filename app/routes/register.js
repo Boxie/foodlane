@@ -6,6 +6,7 @@ module.exports = function(router, passport) {
 
     router.route('/')
         .get(function(req, res, next) {
-			res.render("userform");
+        	var user = { "address" : {}};
+			res.render("userform", {"authstate": req.isAuthenticated(), "mode" : "register", "user" : user });
         })
 };

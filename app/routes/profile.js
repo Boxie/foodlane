@@ -3,6 +3,7 @@
  */
 
 var pug = require('pug');
+var User = require("../models/users");
 
 module.exports = function(router, passport) {
     'use strict';
@@ -24,11 +25,13 @@ module.exports = function(router, passport) {
 
     router.route('/')
         .get(function(req, res, next) {
-            var user = { "address" : {}};
             if (req.isAuthenticated()){
-                //reset user to json file by id
+                //set user to json file by id
+                //var user = User.getUserById(req.session.user_id);
+                res.render("userform", {"authstate": req.isAuthenticated(), "mode" : "edit", "user" : user});
+            }else{
+                res.redirect('/register');
             }
-            res.render("userform", {"authstate": req.isAuthenticated(), "mode" : "edit", "user" : user });
         }).post(function(req, res, next) {
     });
 };

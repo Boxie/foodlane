@@ -31,7 +31,7 @@ module.exports = function(router, passport) {
                         return next(err);
                     }
                     console.log(user.username + ' just logged in ' + req.isAuthenticated());
-                    req.session.user_id = req.user.id;
+                    req.session.user_id = req.user._id;
 
                     return res.redirect('/profile') ;
                 });
