@@ -36,7 +36,7 @@ module.exports = function(router, passport) {
                     res.redirect("/profile");
                     return next();
                 });
-                res.send("ERROR");
+
             })(req, res, next);
         });
 
