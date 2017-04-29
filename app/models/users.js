@@ -24,10 +24,9 @@ module.exports = {
                     cb(doc);
                 }
                 if(size === 0){
-                    console.log("WRONG");
                     cb(null);
                 }
-                return new Error("Found more than 1 user with same credentials.");
+                cb(new Error("Found more than 1 user with same credentials."));
             }
         });
     }
