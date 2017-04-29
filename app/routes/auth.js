@@ -21,7 +21,7 @@ module.exports = function(router, passport) {
 
                 // Technically, the user should exist at this point, but if not, check
                 if(!user) {
-                    res.redirect("/auth/login");
+                    res.send("log in failed");
                     return next();
                 }
 
@@ -33,8 +33,9 @@ module.exports = function(router, passport) {
                     console.log(user.username + ' just logged in ' + req.isAuthenticated());
                     req.session.user_id = req.user.id;
 
-                    res.redirect("/profile");
-                    return next();
+                    res.send("log in succesfull");
+
+                    return;
                 });
 
             })(req, res, next);
@@ -44,7 +45,7 @@ module.exports = function(router, passport) {
     router.route('/logout')
         .get(function(req, res, next) {
             if(req.isAuthenticated()) {
-                logout(req);
+                req.logout(req);
                 res.redirect("/");
             } else {
                 res.redirect("login");
