@@ -11,6 +11,8 @@ var path = require('path');
 var config = require('config');
 var serverConfig = config.get('foodlane.serverConfig');
 
+var bodyParser = require("body-parser");
+
 // create the express app
 // configure middlewares
 var logger = require('winston');
@@ -20,6 +22,9 @@ var start =  function(cb) {
     'use strict';
     // Configure express
     app = express();
+
+    app.use(bodyParser.json());
+    app.use(bodyParser.urlencoded({ extended: false }));
 
     logger.info('[SERVER] Initializing passport');
     require('../pass')(app, passport);

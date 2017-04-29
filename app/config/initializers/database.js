@@ -42,6 +42,27 @@ function createViews(db){
     );
 }
 
+function setupDatabase(){
+    nano.db.create(dbConfig.database , function (err, cb) {
+
+        // on error while creating
+        if(err){
+            logger.error('[DATABASE] Failed to create Database \"' + dbConfig.database +"\"");
+        }
+
+        // created Database successfully
+        logger.info('[DATABASE] Created database \"' + dbConfig.database +"\" SUCCESSFULLY");
+
+        // Generate sample Data
+
+        if(dbConfig.sampleData){
+            require('./sampleData/dbSampleData')(cb);
+        }
+
+        createViews(nano.db.use(dbConfig.database));
+
+    });
+}
 module.exports = function(cb) {
     'use strict';
     // Initialize the component here then call the callback
@@ -56,27 +77,16 @@ module.exports = function(cb) {
             return;
         }
 
+        var foundDatabase = false;
         // body is an array
-        if(!body.includes(dbConfig.database)){
-            nano.db.create(dbConfig.database , function () {
+        body.forEach(function(db){
+            if(db === dbConfig.database){
+                foundDatabase = true;
+            }
+        });
 
-                // on error while creating
-                if(err){
-                    logger.error('[DATABASE] Failed to create Database \"' + dbConfig.database +"\"");
-                }
-
-                // created Database successfully
-                logger.info('[DATABASE] Created database \"' + dbConfig.database +"\" SUCCESSFULLY");
-
-                // Generate sample Data
-
-                if(dbConfig.sampleData){
-                    require('./sampleData/dbSampleData')(cb);
-                }
-
-                createViews(nano.db.use(dbConfig.database));
-
-            });
+        if(!foundDatabase){
+            setupDatabase();
         }
     });
 

@@ -3,9 +3,8 @@
  */
 var LocalStrategy = require('passport-local').Strategy;
 
-var bodyParser = require("body-parser");
-var cookieParser = require("cookie-parser");
 var User = require("../models/users");
+var cookieParser = require("cookie-parser");
 
 var config = require("config");
 var authConfig = config.get("foodlane.authConfig");
@@ -14,10 +13,6 @@ module.exports = function(app, passport) {
 
 
     // Initialize passport
-
-    app.use(bodyParser.json());
-    app.use(bodyParser.urlencoded({ extended: false }));
-    app.use(cookieParser());
     app.use(require('express-session')({
         secret: authConfig.secret,
         resave: authConfig.resave,
@@ -25,7 +20,7 @@ module.exports = function(app, passport) {
     }));
     app.use(passport.initialize());
     app.use(passport.session());
-
+    app.use(cookieParser());
 
     // This is how a user gets serialized
     passport.serializeUser(function(user, done) {
