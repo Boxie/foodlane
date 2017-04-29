@@ -1,13 +1,13 @@
 var db = require("../helpers/database");
 
 module.exports = {
-    getUserByID: function(doc_id) {
+    getUserByID: function(doc_id, cb) {
         db.get(doc_id, function(err, body){
             if(!err){
                 console.log(body);
                 return body;
             }
-            return null;
+            cb(err, body);
         });
     },
 
