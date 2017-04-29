@@ -24,7 +24,11 @@ module.exports = function(router, passport) {
 
     router.route('/')
         .get(function(req, res, next) {
-            res.render("userform", {"authstate": req.isAuthenticated()});
+            var user = { "address" : {}};
+            if (req.isAuthenticated()){
+                //reset user to json file by id
+            }
+            res.render("userform", {"authstate": req.isAuthenticated(), "mode" : "edit", "user" : user });
         }).post(function(req, res, next) {
     });
 };
