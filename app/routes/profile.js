@@ -4,12 +4,13 @@
 
 var pug = require('pug');
 
-module.exports = function(router) {
+module.exports = function(router, passport) {
     'use strict';
     // This will handle the url calls for /users/:user_id
     router.route('/:userId')
         .get(function(req, res, next) {
             // Return user
+            res.render("userform");
         })
         .put(function(req, res, next) {
             // Update user
@@ -23,7 +24,7 @@ module.exports = function(router) {
 
     router.route('/')
         .get(function(req, res, next) {
-
+            res.render("userform", {"authstate": req.isAuthenticated()});
         }).post(function(req, res, next) {
     });
 };

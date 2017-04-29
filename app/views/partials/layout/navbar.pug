@@ -16,7 +16,10 @@ header
         #login_btn.col.offset-s9.s2.m2
           ul.right
             li
-              a.btn.waves-light.waves-effect(href='#login') Log In
+              unless authenticated
+                a.btn.waves-light.waves-effect(href='#login') Log In
+              else
+                a.btn.waves-light.waves-effect(href='/auth/logout') Log Out
     .nav-content.hide-on-med-and-up(style='background-color: #ee6e73;')
       form
         .input-field

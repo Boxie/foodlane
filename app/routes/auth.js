@@ -10,7 +10,7 @@ module.exports = function(router, passport) {
                 console.log(req.user);
                 res.send("Hello " + req.user.first_name + " " + req.user.last_name);
             } else {
-                res.render("login");
+                res.render("login", {"authstate":req.isAuthenticated()});
             }
         }).post(function(req, res, next) {
         // The local login strategy
@@ -33,9 +33,7 @@ module.exports = function(router, passport) {
                     console.log(user.username + ' just logged in ' + req.isAuthenticated());
                     req.session.user_id = req.user.id;
 
-                    res.send("log in succesfull");
-
-                    return;
+                    return res.redirect('/profile') ;
                 });
 
             })(req, res, next);
@@ -46,9 +44,9 @@ module.exports = function(router, passport) {
         .get(function(req, res, next) {
             if(req.isAuthenticated()) {
                 req.logout(req);
-                res.redirect("/");
+                res.redirect("/auth/login");
             } else {
-                res.redirect("login");
+                res.redirect("/auth/login");
             }
         }).post(function(req, res, next) {
         // The local login strategy
