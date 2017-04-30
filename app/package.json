@@ -4,7 +4,7 @@
   "description": "CSA - project",
   "main": "app.js",
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha --recursive",
+    "test": "docker-compose up foodlane-test",
     "start": "nodemon -L app.js"
   },
   "author": "",

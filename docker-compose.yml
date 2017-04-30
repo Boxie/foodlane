@@ -18,3 +18,13 @@ services:
       - 3000:3000
     depends_on:
       - foodlane-couchdb
+
+  foodlane-test:
+    build: ./app
+    volumes:
+      - ./app:/opt/app
+    ports:
+      - 3001:3001
+    depends_on:
+      - foodlane-server
+    command: ./node_modules/mocha/bin/mocha --recursive

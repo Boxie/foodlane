@@ -4,10 +4,12 @@ module.exports = {
     getUserByID: function(doc_id, cb) {
         db.get(doc_id, function(err, body){
             if(!err){
-                console.log(body);
-                return body;
+                if(body.type === "user"){
+                    return cb(err, body);
+                }
+                throw new Error("Found document with false type.");
             }
-            cb(err, body);
+            return cb(err);
         });
     },
 
