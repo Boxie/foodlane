@@ -27,4 +27,4 @@ services:
       - 3001:3001
     depends_on:
       - foodlane-server
-    command: ./node_modules/mocha/bin/mocha --recursive
+    command: ./node_modules/istanbul/lib/cli.js cover _mocha -- --recursive
