@@ -67,13 +67,8 @@ module.exports = function(router, passport) {
                 if (nexists){
                     //check ob die passwörter stimmen
                     if (req.body.password==req.body.repeatpassword){
-                        /*User.addUsers(req.body, function(err){
-                            if (err){
-                                res.send("Es ist ein Fehler aufgetreten.");
-                            } else {
-                                res.send("Schau in den log.");
-                            }
-                        });*/
+                        User.addUsers(req.body);
+                        res.redirect("/auth/login");
                     }else{
                         res.send("Keine identischen Passwörter");
                     }

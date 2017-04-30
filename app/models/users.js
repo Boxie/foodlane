@@ -33,7 +33,7 @@ module.exports = {
         });
     },
 
-    addUsers: function(data, cb){
+    addUsers: function(data){
         var user = {
             "type": "user",
             "email": data.email,
@@ -61,19 +61,18 @@ module.exports = {
                     return;
                 }
                 if(size === 0){
-                    cb(true);
-                }
-            }
-        });
-        db.view('users', 'list_email', { key: [email]}, function(err,body){
-            if (!err) {
-                var size = Object.keys(body.rows).length;
-                console.log("SIZE: " + size);
-                if(size > 0){
-                    cb(false);
-                }
-                if(size === 0){
-                    cb(true);
+                    db.view('users', 'list_email', { key: [email]}, function(err,body){
+                        if (!err) {
+                            var size = Object.keys(body.rows).length;
+                            console.log("SIZE: " + size);
+                            if(size > 0){
+                                cb(false);
+                            }
+                            if(size === 0){
+                                cb(true);
+                            }
+                        }
+                    });
                 }
             }
         });
