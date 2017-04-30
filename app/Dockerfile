@@ -8,7 +8,5 @@ COPY . /opt/app
 
 WORKDIR /opt/app
 
-RUN npm install --global mocha
-
 EXPOSE 3000
 CMD [ "npm", "start" ]
