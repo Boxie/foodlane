@@ -1,4 +1,5 @@
 var pug = require('pug');
+var User = require('../models/users');
 
 module.exports = function(router, passport) {
     'use strict';
@@ -49,17 +50,36 @@ module.exports = function(router, passport) {
                 res.redirect("/auth/login");
             }
         }).post(function(req, res, next) {
-        // The local login strategy
-        logout(req);
-    });
+            // The local login strategy
+            logout(req);
+        });
 
     router.route('/register')
         .get(function(req, res, next) {
-            var user = { "address" : {}};
-            res.render("userform", {
+            res.render("register", {
                 "authstate": req.isAuthenticated(),
-                "mode" : "register",
-                "user" : user
+            });
+        })
+        .post(function(req, res, next){
+            //checks for existing usernames and email adresses
+            User.checkUser(req.body.username, req.body.email, function(nexists) {
+                //sollte es nicht existieren
+                if (nexists){
+                    //check ob die passwörter stimmen
+                    if (req.body.password==req.body.repeatpassword){
+                        /*User.addUsers(req.body, function(err){
+                            if (err){
+                                res.send("Es ist ein Fehler aufgetreten.");
+                            } else {
+                                res.send("Schau in den log.");
+                            }
+                        });*/
+                    }else{
+                        res.send("Keine identischen Passwörter");
+                    }
+                } else {
+                    res.send("Nutzer bereits vorhanedn.");
+                }
             });
         });
 };

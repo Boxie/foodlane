@@ -27,10 +27,21 @@ module.exports = function(router, passport) {
         .get(function(req, res, next) {
             if (req.isAuthenticated()){
                 //set user to json file by id
-                //var user = User.getUserById(req.session.user_id);
-                res.render("userform", {"authstate": req.isAuthenticated(), "mode" : "edit", "user" : user});
+                var user;
+                User.getUserByID(req.session.user_id, function(err, doc){
+                    if(!err){
+                        user = doc;
+                        console.log(user);
+                        res.render("profile", {
+                            "authstate": req.isAuthenticated(),
+                            "user" : user
+                        });
+                        return;
+                    }
+                    res.redirect('/auth/register');
+                });
             }else{
-                res.redirect('/register');
+                res.redirect('/auth/register');
             }
         }).post(function(req, res, next) {
     });

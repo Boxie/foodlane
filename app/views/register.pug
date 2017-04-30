@@ -1,42 +1,42 @@
 extends layouts/default.pug
 
 block content
-  div(class='container')
+  .container
     form(action='#', method='POST')
       .row
         .input-field.col.s6
-          input#first_name(type='text', required='', validate='', name='first_name', value=user.first_name)
+          input#first_name(type='text', required='', validate='', name='first_name')
           |  
           label(for='first_name') First Name
         .input-field.col.s6
-          input#last_name(type='text', required='', validate='', name='last_name', value=user.last_name)
+          input#last_name(type='text', required='', validate='', name='last_name')
           |  
           label(for='last_name') Last Name
       .row
         .input-field.col.s6
-          input#user_name(type='text', required='', validate='', name='user_name', value=user.username)
+          input#user_name(type='text', required='', validate='', name='username')
           |  
           label(for='user_name') Username
         .input-field.col.s6
-          input#email(type='email', required='', validate='', name='email', value=user.email)
+          input#email(type='email', required='', validate='', name='email')
           |  
           label(for='email') E-Mail Address
       .row
         .input-field.col.s10
-          input#street(type='text', required='', validate='', name='street', value=user.address.street)
+          input#street(type='text', required='', validate='', name='street')
           |  
           label(for='street') Street
         .input-field.col.s2
-          input#street_number(type='text', required='', validate='', name='street_number', value=user.address.number)
+          input#street_number(type='text', required='', validate='', name='street_number')
           |  
           label(for='street_number') Street Number
       .row
         .input-field.col.s4
-          input#postcode(type='text', required='', validate='', name='postcode', value=user.address.postcode)
+          input#postcode(type='text', required='', validate='', name='postcode')
           |  
           label(for='postcode') Postcode
         .input-field.col.s8
-          input#city(type='text', required='', validate='', name='city', value=user.address.city)
+          input#city(type='text', required='', validate='', name='city')
           |  
           label(for='city') City
       .row
@@ -49,10 +49,7 @@ block content
           |
           label(for='repeatpassword') Repeat your Password
       .row
-        if mode = "register" 
           button(type='submit' class='btn waves-effect waves-light right') Register
-        else
-          button(type='submit' class='btn waves-effect waves-light right') Save
 
 
 block variables
