@@ -13,7 +13,8 @@ module.exports = function(router, passport) {
             } else {
                 res.render("login", {"authstate":req.isAuthenticated()});
             }
-        }).post(function(req, res, next) {
+        })
+        .post(function(req, res, next) {
         // The local login strategy
             passport.authenticate('local', function(err, user) {
                 if (err) {
@@ -49,7 +50,8 @@ module.exports = function(router, passport) {
             } else {
                 res.redirect("/auth/login");
             }
-        }).post(function(req, res, next) {
+        })
+        .post(function(req, res, next) {
             // The local login strategy
             logout(req);
         });
