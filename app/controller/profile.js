@@ -44,7 +44,7 @@ module.exports = {
     		data.address.street = change.street;
     	}
     	if (!(change.number ==="")){
-    		data.addressnumber = change.number;
+    		data.address.number = change.number;
     	}
     	if (!(change.postcode ==="")){
     		data.address.postcode = change.postcode;
