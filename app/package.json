@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "array.prototype.find": "^2.0.4",
     "async": "^2.4.0",
     "body-parser": "^1.17.1",
     "change-case": "^3.0.1",
@@ -20,11 +21,14 @@
     "express-session": "^1.15.2",
     "extend": "^3.0.1",
     "nano": "*",
+    "node.extend": "^2.0.0",
     "nodemon": "^1.9.2",
     "passport": "0.3.2",
     "passport-local": "*",
     "pug": "^2.0.0-beta.12",
+    "q": "^1.5.0",
     "require-dir": "^0.3.1",
+    "underscore.string": "^3.3.4",
     "validate.js": "^0.11.1",
     "winston": "^2.3.1"
   },
