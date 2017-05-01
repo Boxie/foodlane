@@ -1,5 +1,5 @@
 var pug = require('pug');
-var User = require('../models/users');
+var auth = require('../controller/auth');
 
 module.exports = function(router, passport) {
     'use strict';
@@ -22,7 +22,7 @@ module.exports = function(router, passport) {
 
                 // Technically, the user should exist at this point, but if not, check
                 if(!user) {
-                    res.send("log in failed");
+                    //res.redirect("/auth/login");
                     return next();
                 }
 
@@ -62,18 +62,11 @@ module.exports = function(router, passport) {
         })
         .post(function(req, res, next){
             //checks for existing usernames and email adresses
-            User.checkUser(req.body.username, req.body.email, function(nexists) {
-                //sollte es nicht existieren
-                if (nexists){
-                    //check ob die passwörter stimmen
-                    if (req.body.password==req.body.repeatpassword){
-                        User.addUsers(req.body);
-                        res.redirect("/auth/login");
-                    }else{
-                        res.send("Keine identischen Passwörter");
-                    }
+            auth.register(req.body, function (err, doc){
+                if(!err){
+                    res.redirect("/auth/login");
                 } else {
-                    res.send("Nutzer bereits vorhanedn.");
+                    res.send(err);
                 }
             });
         });

@@ -3,7 +3,7 @@
  */
 var LocalStrategy = require('passport-local').Strategy;
 
-var User = require("../models/users");
+var User = require("../controller/auth");
 var cookieParser = require("cookie-parser");
 
 var config = require("config");
@@ -35,7 +35,7 @@ module.exports = function(app, passport) {
 
     // Lookup a user in our database
     var lookupUser = function (username, password, done) {
-        User.checkCredentials(username, password, function (auth_user){
+        User.checkCredentials(username, password, function (error, auth_user){
             if(auth_user){
 
                 return done(null, auth_user);

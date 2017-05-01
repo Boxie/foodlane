@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "async": "^2.3.0",
+    "async": "^2.4.0",
     "body-parser": "^1.17.1",
     "change-case": "^3.0.1",
     "config": "*",
@@ -18,12 +18,14 @@
     "express": "*",
     "express-generator": "*",
     "express-session": "^1.15.2",
+    "extend": "^3.0.1",
     "nano": "*",
     "nodemon": "^1.9.2",
     "passport": "0.3.2",
     "passport-local": "*",
     "pug": "^2.0.0-beta.12",
     "require-dir": "^0.3.1",
+    "validate.js": "^0.11.1",
     "winston": "^2.3.1"
   },
   "devDependencies": {

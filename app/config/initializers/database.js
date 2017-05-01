@@ -12,27 +12,27 @@ var nano = require('nano')(dbAddress)
 function createViews(db){
     db.insert(
         { "views":
-            { "list_username":
+            { "by_username":
                 { "map":
                     function(doc) {
                         if(doc.type === "user") {
-                            emit([doc.username], doc._id);
+                            emit([doc.username], doc);
                         }
                     }
                 },
-                "list_email": {
+                "by_email": {
                     "map":
                         function(doc) {
                             if(doc.type === "user") {
-                                emit([doc.email], doc._id);
+                                emit([doc.email], doc);
                             }
                         }
                 },
-                "username_password": {
+                "by_credentials": {
                     "map":
                         function(doc) {
                             if(doc.type === "user") {
-                                emit([doc.username,doc.password]);
+                                emit([doc.username,doc.password], doc);
                             }
                         }
                 },

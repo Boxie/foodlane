@@ -3,7 +3,7 @@
  */
 
 var pug = require('pug');
-var User = require("../models/users");
+var profile = require("../controller/profile");
 
 module.exports = function(router, passport) {
     'use strict';
@@ -27,11 +27,8 @@ module.exports = function(router, passport) {
         .get(function(req, res, next) {
             if (req.isAuthenticated()){
                 //set user to json file by id
-                var user;
-                User.getUserByID(req.session.user_id, function(err, doc){
+                profile.getByID(req.session.user_id, function(err, user){
                     if(!err){
-                        user = doc;
-                        console.log(user);
                         res.render("profile", {
                             "authstate": req.isAuthenticated(),
                             "user" : user
