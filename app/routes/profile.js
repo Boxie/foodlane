@@ -35,11 +35,20 @@ module.exports = function(router, passport) {
                         });
                         return;
                     }
-                    res.redirect('/auth/register');
+                    res.redirect('/auth/login');
                 });
             }else{
                 res.redirect('/auth/register');
             }
         }).post(function(req, res, next) {
     });
+
+    router.route('/edit')
+        .get(function(req,res,next) {
+            if (req.isAUthenticed()){
+                res.send('work in progress');
+            } else {
+                res.redirect('/auth/login');
+            }
+        })
 };
