@@ -18,21 +18,23 @@ module.exports = function(router, passport) {
         // The local login strategy
             passport.authenticate('local', function(err, user) {
                 if (err) {
-                    console.log("error 1");
+                    res.redirect("/auth/login");
+                    //console.log("error 1");
                     return next(err);
                 }
 
                 // Technically, the user should exist at this point, but if not, check
                 if(!user) {
-                    //res.redirect("/auth/login");
-                    console.log("error 2");
+                    res.redirect("/auth/login");
+                    //console.log("error 2");
                     return next();
                 }
 
                 // Log the user in!
                 req.logIn(user, function(err) {
                     if (err) {
-                        console.log("error 3");
+                        //console.log("error 3");
+                        res.redirect("/auth/login");
                         return next(err);
                     }
                     console.log(user.username + ' just logged in ' + req.isAuthenticated());

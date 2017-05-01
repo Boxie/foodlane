@@ -104,11 +104,15 @@ module.exports = {
                 if(size === 1){
 
                     cb(null, result[0]);
+                    return;
                 }
                 if(size === 0){
                     cb(null, null);
+                    return;
                 }
+
                 cb(new Error("Found more than 1 user with same credentials."));
+                return;
             }
         })
     },
