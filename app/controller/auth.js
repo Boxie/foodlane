@@ -19,7 +19,7 @@ module.exports = {
 
                     //email is in use by other doc
                     cb(new Error("Email already in use"),false);
-
+                    return;
                 }
                 // email is unique
                 if(size === 0){
@@ -47,7 +47,7 @@ module.exports = {
 
                     //username is in use by other doc
                     cb(new Error("Username already in use"), false);
-
+                    return;
                 }
                 // username is unique
                 if(size === 0){
@@ -63,6 +63,9 @@ module.exports = {
 
     register: function(data, cb){
 
+        if(data.password != data.repeatpassword){
+            return (new Error("Passwords not equal"));
+        }
         async.parallel({
 
             username: function(callback){
@@ -84,7 +87,7 @@ module.exports = {
                         cb(null,document);
                     });
                 } catch (error){
-                    cb(error.detail,null);
+                    cb(error,null);
                 }
 
             } else {
