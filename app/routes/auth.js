@@ -18,14 +18,14 @@ module.exports = function(router, passport) {
         // The local login strategy
             passport.authenticate('local', function(err, user) {
                 if (err) {
-                    res.status(401).send("Falscher Login.");
+                    res.sendStatus(401);
                     //console.log("error 1");
                     return next(err);
                 }
 
                 // Technically, the user should exist at this point, but if not, check
                 if(!user) {
-                    res.status(401).send("Falscher Login.");
+                    res.sendStatus(401);
                     //console.log("error 2");
                     return next();
                 }
@@ -34,7 +34,7 @@ module.exports = function(router, passport) {
                 req.logIn(user, function(err) {
                     if (err) {
                         //console.log("error 3");
-                        res.status(401).send("Falscher Login.");
+                        res.sendStatus(401);
                         return next(err);
                     }
                     console.log(user.username + ' just logged in ' + req.isAuthenticated());
@@ -68,14 +68,12 @@ module.exports = function(router, passport) {
             });
         })
         .post(function(req, res, next){
-            console.log("Register attempt");
             //checks for existing usernames and email adresses
             auth.register(req.body, function (err, doc){
                 if(!err){
                     res.send({redirect : '/auth/login'});
                 } else {
-                    console.log(err);
-                    res.status(401);
+                    res.sendStatus(412);
                 }
             });
         });

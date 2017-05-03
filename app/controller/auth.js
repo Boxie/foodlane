@@ -64,9 +64,9 @@ module.exports = {
     register: function(data, cb){
 
         if(data.password != data.repeatpassword){
-            return (new Error("Passwords not equal"));
+            cb (new Error("Passwords not equal"), null);
+            return;
         }
-        console.log("passwords checked");
         async.parallel({
 
             username: function(callback){

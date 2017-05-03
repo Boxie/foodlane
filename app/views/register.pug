@@ -60,7 +60,7 @@ block ajax_scripts
         $('#registerform').submit(function(event){
             event.preventDefault();
             $.ajax({
-                url : "/auth/login",
+                url : "/auth/register",
                 type : "post",
                 data : $('#registerform').serialize(),
                 error : function(data, error, text){
