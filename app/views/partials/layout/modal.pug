@@ -21,21 +21,24 @@
 script.
   //XMLHTTP Request
   $('#loginmodal').submit(function(event){
+    console.log("AJAX");
     event.preventDefault();
     $.ajax({
         url : "/auth/login",
         type : "post",
         data : $('#loginmodal').serialize(),
         error : function(data, error, texterr){
-            swal({
-                title : "Invalid Credentials",
-                type : "error",
-                showConfirmButton : false,
-                allowOutsideClick : true,
-                timer : 2000
-            });
-        }
-        }
+          swal({
+              title : "Invalid Credentials",
+              type : "error",
+              showConfirmButton : false,
+              allowOutsideClick : true,
+              timer : 2000
+          });
+        },
+        success : function (data, textStatus, jqHXT){
+          window.location.replace(data.redirect);
+        } 
     });
   });
       
