@@ -71,7 +71,35 @@ module.exports = function(router, passport) {
             //checks for existing usernames and email adresses
             auth.register(req.body, function (err, doc){
                 if(!err){
-                    res.send({redirect : '/auth/login'});
+                    // The local login strategy
+                    passport.authenticate('local', function(err, user) {
+                        if (err) {
+                            res.sendStatus(401);
+                            //console.log("error 1");
+                            return next(err);
+                        }
+
+                        // Technically, the user should exist at this point, but if not, check
+                        if(!user) {
+                            res.sendStatus(401);
+                            //console.log("error 2");
+                            return next();
+                        }
+
+                        // Log the user in!
+                        req.logIn(user, function(err) {
+                            if (err) {
+                                //console.log("error 3");
+                                res.sendStatus(401);
+                                return next(err);
+                            }
+                            console.log(user.username + ' just logged in ' + req.isAuthenticated());
+                            req.session.user_id = req.user._id;
+
+                            res.send({redirect : '/profile'}) ;
+                        });
+
+                    })(req, res, next);
                 } else {
                     res.sendStatus(412);
                 }
