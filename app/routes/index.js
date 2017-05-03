@@ -22,5 +22,10 @@ module.exports = function(app, passport) {
         // Add router to the speficied route name in the app
         app.use('/' + changeCase.paramCase(routeName), router);
     });
+
+    app.use(function(req, res, next) {
+        res.status(404).render("missing_page");
+    });
+
 };
 
