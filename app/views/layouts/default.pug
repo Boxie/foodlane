@@ -13,7 +13,6 @@ html
         script(src='/js/materialize.js')
         script(src='/js/sweetalert.min.js')
 
-        block scripts
         //variables currently used authenticated
         block variables
     body
@@ -21,5 +20,6 @@ html
         block content
         include ../partials/layout/footer.pug
 
+        block scripts
         block ajax_scripts
         block on_document_ready
