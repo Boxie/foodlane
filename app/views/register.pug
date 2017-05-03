@@ -2,7 +2,7 @@ extends layouts/default.pug
 
 block content
   .container
-    form(action='#', method='POST')
+    form#registerform(action='#', method='POST')
       .row
         .input-field.col.s12.m6
           input#first_name(type='text', required='', validate='', name='first_name')
@@ -54,3 +54,26 @@ block content
 
 block variables
   - var authenticated = authstate
+
+block ajax_scripts
+    script.
+        $('#registerform').submit(function(event){
+            event.preventDefault();
+            $.ajax({
+                url : "/auth/register",
+                type : "post",
+                data : $('#registerform').serialize(),
+                error : function(data, error, text){
+                    swal({
+                        title : "Missmatched Input",
+                        type : "error",
+                        showConfirmButton : false,
+                        allowOutsideClick : true,
+                        timer : 2000
+                    });
+                },
+                success : function (data, textStatus, jqHXT){
+                    window.location.replace(data.redirect);
+                }
+            });
+        });

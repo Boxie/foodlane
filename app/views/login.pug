@@ -2,7 +2,7 @@ extends layouts/default.pug
 
 block content
     .container(style='padding-bottom: 50px;')
-        form(action='/auth/login', method='POST')
+        form#loginform(action='/auth/login', method='POST')
             .input-field
                 input#username.validate(type='text', name='username', required='')
                 |
@@ -20,4 +20,26 @@ block content
 block variables
     - var authenticated = authstate
 
+block ajax_scripts
+    script.
+        $('#loginform').submit(function(event){
+            event.preventDefault();
+            $.ajax({
+                url : "/auth/login",
+                type : "post",
+                data : $('#loginform').serialize(),
+                error : function(data, error, text){
+                    swal({
+                        title : "Invalid Credentials",
+                        type : "error",
+                        showConfirmButton : false,
+                        allowOutsideClick : true,
+                        timer : 2000
+                    });
+                },
+                success : function (data, textStatus, jqHXT){
+                    window.location.replace(data.redirect);
+                } 
+            });
+        });
 
