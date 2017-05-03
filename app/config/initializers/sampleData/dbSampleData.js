@@ -4,6 +4,8 @@
 
 var db = require('./../../../helpers/database');
 var logger = require('winston');
+var User = require("../../../models/User");
+var auth = require("../../../controller/auth");
 
 var request = require('request');
 
@@ -22,21 +24,14 @@ module.exports = function(cb) {
 function addUsers(body, cb){
 
     body.forEach(function (data){
-        var user = {
-            "type": "user",
-            "email": data.email,
-            "username": data.username,
-            "password": data.password,
-            "first_name": data.first_name,
-            "last_name": data.last_name,
-            "address": {
-                "street": data.street,
-                "number": data.number,
-                "postcode": data.postcode,
-                "city": data.city
-            }
-        };
-        db.insert(user);
+        var document = User.create(auth.parseDataToUser(data));
+        try{
+            document.save(function(error){
+
+            });
+        } catch (error) {
+            console.log("Validation failed.");
+        }
 
     });
     cb();
