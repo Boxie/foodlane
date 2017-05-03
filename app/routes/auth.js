@@ -9,7 +9,7 @@ module.exports = function(router, passport) {
         .get(function(req, res, next) {
             if(req.isAuthenticated()) {
                 console.log(req.user);
-                res.redirect("/profile");
+                res.send("Hello " + req.user.first_name + " " + req.user.last_name);
             } else {
                 res.render("login", {"authstate":req.isAuthenticated()});
             }
