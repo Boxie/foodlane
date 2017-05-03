@@ -6,12 +6,12 @@ html
         //CSS Files
         link(rel='stylesheet', href='/css/materialize.css')
         link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
+        link(rel='stylesheet', href='/css/sweetalert.css')
         block links
 
         script(src='/js/jquery.js')
         script(src='/js/materialize.js')
-
-
+        script(src='/js/sweetalert.min.js')
 
         block scripts
         //variables currently used authenticated
@@ -21,4 +21,4 @@ html
         block content
         include ../partials/layout/footer.pug
 
-        block on_document_scripts
+        block on_document_ready

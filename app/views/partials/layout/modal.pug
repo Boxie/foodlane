@@ -4,7 +4,7 @@
       i.material-icons clear
     .container(style='padding-bottom: 50px;')
       h3 Log In
-      form(action='/auth/login', method='POST')
+      form#loginmodal(action='/auth/login', method='POST')
         .input-field
           input#username.validate(type='text', name='username', required='')
           |  
@@ -18,7 +18,28 @@
         |  
         button.btn.waves-effect.waves-light.right.modal-action.modal-close(type='submit') Submit
 
-block on_document_scripts
+script.
+  //XMLHTTP Request
+  $('#loginmodal').submit(function(event){
+    event.preventDefault();
+    $.ajax({
+        url : "/auth/login",
+        type : "post",
+        data : $('#loginmodal').serialize(),
+        error : function(data, error, texterr){
+            swal({
+                title : "Invalid Credentials",
+                type : "error",
+                showConfirmButton : false,
+                allowOutsideClick : true,
+                timer : 2000
+            });
+        }
+        }
+    });
+  });
+      
+block on_document_ready
   script.
     //Modal Initializer
     $(document).ready(function(){
