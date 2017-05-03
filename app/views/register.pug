@@ -55,7 +55,7 @@ block content
 block variables
   - var authenticated = authstate
 
-block scripts
+block ajax_scripts
     script.
         $('#registerform').submit(function(event){
             event.preventDefault();
@@ -71,6 +71,9 @@ block scripts
                         allowOutsideClick : true,
                         timer : 2000
                     });
+                },
+                success : function (data, textStatus, jqHXT){
+                    window.location.replace(data.redirect);
                 }
             });
         });

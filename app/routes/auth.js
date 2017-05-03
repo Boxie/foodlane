@@ -68,12 +68,14 @@ module.exports = function(router, passport) {
             });
         })
         .post(function(req, res, next){
+            console.log("Register attempt");
             //checks for existing usernames and email adresses
             auth.register(req.body, function (err, doc){
                 if(!err){
-                    res.redirect("/auth/login");
+                    res.send({redirect : '/auth/login'});
                 } else {
-                    res.send(err);
+                    console.log(err);
+                    res.status(401);
                 }
             });
         });
