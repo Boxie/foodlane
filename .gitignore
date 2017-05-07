@@ -4,3 +4,4 @@ node_modules
 /config.codekit
 /.codekit-cache/
 /app/coverage/
+/app/public/sass/.sass-cache
