@@ -3,7 +3,9 @@
     a.modal-action.modal-close.grey-text.right(href='#!')
       i.material-icons clear
     .container(style='padding-bottom: 50px;')
-      img(src='/images/brands/fetch/fetch_color.png').responsive-img
+      .row
+        .col.offset-s4.s4.l12
+          img(src='/images/brands/fetch/fetch_color.png').responsive-img
       form#loginmodal(action='/auth/login', method='POST')
         .input-field
           input#username.validate(type='text', name='username', required='')
