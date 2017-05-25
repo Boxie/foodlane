@@ -1,7 +1,4 @@
 /**
- * Created by Lukas on 21.04.17.
- */
-/**
  * Created by Lukas on 30.04.17.
  */
 var dbHandle = require("../helpers/database");

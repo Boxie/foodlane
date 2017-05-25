@@ -1,115 +1,115 @@
 extends layouts/default.pug
 
 block content
-	.container
-		.row
-			.switch.right
-				label
-					| Profile 
-					input#type(type='checkbox')
-					span.lever
-					|  Edit
-		#profile
-			.row
-				.col.s12.m6.l3.card.hoverable
-					.card-content
-						span(class='card-title') Name
-						p #{user.first_name} #{user.last_name}
-				.col.s12.m6.l3.card.hoverable
-					.card-content
-						span(class='card-title') Username
-						p #{user.username}
-				.col.s12.m12.l6.card.hoverable
-					.card-content
-						span(class='card-title') E-Mail
-						p #{user.email}
-			.row
-				.col.s12.m6.card.hoverable
-					.card-content
-						span(class='card-title') Street
-						p #{user.address.street} #{user.address.number}
-				.col.m6.s12.card.hoverable
-					.card-content
-						span(class='card-title') City
-						p #{user.address.postcode} #{user.address.city}
-		#edit.hide
-			form#editform(action='#', method='POST')
-				.row
-					.input-field.col.s12.m10
-						input(type='text' id='street' name='street' validate='' value=user.address.street)
-						|  
-						label(for='street') Street
-					.input-field.col.s12.m2
-						input(type='text' id='number' name='number' validate='' value=user.address.number)
-						|  
-						label(for='number') Number
-				.row
-					.input-field.col.s12.m3
-						input(type='text' id='postcode' name='postcode' validate='' value=user.address.postcode)
-						|  
-						label(for='postcode') Postcode
-					.input-field.col.s12.m9
-						input(type='text' id='city' name='city' validate='' value=user.address.city)
-						|  
-						label(for='city') City
-				.row
-					.input-field.col.s12.m12.l4
-						input(type='password' id='oldpassword' name='oldpassword' validate='')
-						|  
-						label(for='oldpassword') Current Password
-					.input-field.col.s12.m6.l4
-						input(type='password' id='newpassword' name='newpassword' validate='')
-						|  
-						label(for='newpassword') New Password
-					.input-field.col.s12.m6.l4
-						input(type='password' id='newpasswordrepeat' name='newpasswordrepeat' validate='')
-						|  
-						label(for='newpasswordrepeat') Repeat New Password
-				.row
-					.col.s12
-						button(type='submit' class='btn waves-effect waves-light right') Save
+    .container
+        .row
+            .switch.right
+                label
+                    | Profile
+                    input#type(type='checkbox')
+                    span.lever
+                    |  Edit
+        #profile
+            .row
+                .col.s12.m6.l3.card.hoverable
+                    .card-content
+                        span(class='card-title') Name
+                        p #{user.first_name} #{user.last_name}
+                .col.s12.m6.l3.card.hoverable
+                    .card-content
+                        span(class='card-title') Username
+                        p #{user.username}
+                .col.s12.m12.l6.card.hoverable
+                    .card-content
+                        span(class='card-title') E-Mail
+                        p #{user.email}
+            .row
+                .col.s12.m6.card.hoverable
+                    .card-content
+                        span(class='card-title') Street
+                        p #{user.address.street} #{user.address.number}
+                .col.m6.s12.card.hoverable
+                    .card-content
+                        span(class='card-title') City
+                        p #{user.address.postcode} #{user.address.city}
+        #edit.hide
+            form#editform(action='#', method='POST')
+                .row
+                    .input-field.col.s12.m10
+                        input(type='text' id='street' name='street' validate='' value=user.address.street)
+                        |
+                        label(for='street') Street
+                    .input-field.col.s12.m2
+                        input(type='text' id='number' name='number' validate='' value=user.address.number)
+                        |
+                        label(for='number') Number
+                .row
+                    .input-field.col.s12.m3
+                        input(type='text' id='postcode' name='postcode' validate='' value=user.address.postcode)
+                        |
+                        label(for='postcode') Postcode
+                    .input-field.col.s12.m9
+                        input(type='text' id='city' name='city' validate='' value=user.address.city)
+                        |
+                        label(for='city') City
+                .row
+                    .input-field.col.s12.m12.l4
+                        input(type='password' id='oldpassword' name='oldpassword' validate='')
+                        |
+                        label(for='oldpassword') Current Password
+                    .input-field.col.s12.m6.l4
+                        input(type='password' id='newpassword' name='newpassword' validate='')
+                        |
+                        label(for='newpassword') New Password
+                    .input-field.col.s12.m6.l4
+                        input(type='password' id='newpasswordrepeat' name='newpasswordrepeat' validate='')
+                        |
+                        label(for='newpasswordrepeat') Repeat New Password
+                .row
+                    .col.s12
+                        button(type='submit' class='btn waves-effect waves-light right') Save
 
 
 block variables
-	- var authenticated = authstate
+    - var authenticated = authstate
 
 block scripts
-	script.
-		$('#type').change(function(){
-			if ($('#type').prop('checked')){
-				$('#profile').addClass('hide');
-				$('#edit').removeClass('hide');
-			} else {
-				$('#profile').removeClass('hide');
-				$('#edit').addClass('hide');
-			}
-		});
+    script.
+        $('#type').change(function () {
+            if ($('#type').prop('checked')) {
+                $('#profile').addClass('hide');
+                $('#edit').removeClass('hide');
+            } else {
+                $('#profile').removeClass('hide');
+                $('#edit').addClass('hide');
+            }
+        });
 
 block ajax_scripts
-	script.
-		$('#editform').submit(function(event){
-			event.preventDefault();
-			$.ajax({
-			    url : "/profile/edit",
-			    type : "post",
-			    data : $('#editform').serialize(),
-			    error : function(data, error, text){
-			        swal({
-			            title : "Missmatched Input",
-			            type : "error",
-			            showConfirmButton : false,
-			            allowOutsideClick : true,
-			            timer : 2000
-			        });
-			    },
-			    success : function (data, textStatus, jqHXT){
-			    	swal({
-			            title : "Profile updated",
-			            type : "success",
-			            showConfirmButton : false,
-			            allowOutsideClick : true,
-			            timer : 2000
-			        });
-			    }
-			});
-		});
+    script.
+        $('#editform').submit(function (event) {
+            event.preventDefault();
+            $.ajax({
+                url: "/profile/edit",
+                type: "post",
+                data: $('#editform').serialize(),
+                error: function (data, error, text) {
+                    swal({
+                        title: "Missmatched Input",
+                        type: "error",
+                        showConfirmButton: false,
+                        allowOutsideClick: true,
+                        timer: 2000
+                    });
+                },
+                success: function (data, textStatus, jqHXT) {
+                    swal({
+                        title: "Profile updated",
+                        type: "success",
+                        showConfirmButton: false,
+                        allowOutsideClick: true,
+                        timer: 2000
+                    });
+                }
+            });
+        });

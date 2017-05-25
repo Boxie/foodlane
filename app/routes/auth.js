@@ -1,22 +1,22 @@
 var pug = require('pug');
 var auth = require('../controller/auth');
 
-module.exports = function(router, passport) {
+module.exports = function (router, passport) {
     'use strict';
     // This will handle the url calls for /auth/ROUTE
 
     router.route('/login')
-        .get(function(req, res, next) {
-            if(req.isAuthenticated()) {
+        .get(function (req, res, next) {
+            if (req.isAuthenticated()) {
                 console.log(req.user);
                 res.redirect("/profile");
             } else {
-                res.render("login", {"authstate":req.isAuthenticated()});
+                res.render("login", {"authstate": req.isAuthenticated()});
             }
         })
-        .post(function(req, res, next) {
-        // The local login strategy
-            passport.authenticate('local', function(err, user) {
+        .post(function (req, res, next) {
+            // The local login strategy
+            passport.authenticate('local', function (err, user) {
                 if (err) {
                     res.sendStatus(401);
                     //console.log("error 1");
@@ -24,14 +24,14 @@ module.exports = function(router, passport) {
                 }
 
                 // Technically, the user should exist at this point, but if not, check
-                if(!user) {
+                if (!user) {
                     res.sendStatus(401);
                     //console.log("error 2");
                     return next();
                 }
 
                 // Log the user in!
-                req.logIn(user, function(err) {
+                req.logIn(user, function (err) {
                     if (err) {
                         //console.log("error 3");
                         res.sendStatus(401);
@@ -40,7 +40,7 @@ module.exports = function(router, passport) {
                     console.log(user.username + ' just logged in ' + req.isAuthenticated());
                     req.session.user_id = req.user._id;
 
-                    res.send({redirect : '/profile'}) ;
+                    res.send({redirect: '/profile'});
                 });
 
             })(req, res, next);
@@ -48,8 +48,8 @@ module.exports = function(router, passport) {
 
     // route /logout
     router.route('/logout')
-        .get(function(req, res, next) {
-            if(req.isAuthenticated()) {
+        .get(function (req, res, next) {
+            if (req.isAuthenticated()) {
                 req.logout(req);
                 res.redirect("/auth/login");
             } else {
@@ -62,17 +62,17 @@ module.exports = function(router, passport) {
         });
 
     router.route('/register')
-        .get(function(req, res, next) {
+        .get(function (req, res, next) {
             res.render("register", {
-                "authstate": req.isAuthenticated(),
+                "authstate": req.isAuthenticated()
             });
         })
-        .post(function(req, res, next){
+        .post(function (req, res, next) {
             //checks for existing usernames and email adresses
-            auth.register(req.body, function (err, doc){
-                if(!err){
+            auth.register(req.body, function (err, doc) {
+                if (!err) {
                     // The local login strategy
-                    passport.authenticate('local', function(err, user) {
+                    passport.authenticate('local', function (err, user) {
                         if (err) {
                             res.sendStatus(401);
                             //console.log("error 1");
@@ -80,14 +80,14 @@ module.exports = function(router, passport) {
                         }
 
                         // Technically, the user should exist at this point, but if not, check
-                        if(!user) {
+                        if (!user) {
                             res.sendStatus(401);
                             //console.log("error 2");
                             return next();
                         }
 
                         // Log the user in!
-                        req.logIn(user, function(err) {
+                        req.logIn(user, function (err) {
                             if (err) {
                                 //console.log("error 3");
                                 res.sendStatus(401);
@@ -96,7 +96,7 @@ module.exports = function(router, passport) {
                             console.log(user.username + ' just logged in ' + req.isAuthenticated());
                             req.session.user_id = req.user._id;
 
-                            res.send({redirect : '/profile'}) ;
+                            res.send({redirect: '/profile'});
                         });
 
                     })(req, res, next);

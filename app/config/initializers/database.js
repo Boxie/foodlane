@@ -7,7 +7,7 @@ var config = require('config');
 var dbConfig = config.get('foodlane.dbConfig');
 var dbAddress = dbConfig.protocol + '://' + dbConfig.username + ':' + dbConfig.password + "@" + dbConfig.host + ':' + dbConfig.port;
 
-var nano = require('nano')(dbAddress)
+var nano = require('nano')(dbAddress);
 
 function createViews(db){
     db.insert(
@@ -68,7 +68,7 @@ module.exports = function(cb) {
     // Initialize the component here then call the callback
     // More logic
 
-    logger.info("[DATABSE] Initialize Database");
+    logger.info("[DATABASE] Initialize Database");
 
     nano.db.list(function(err, body) {
 
@@ -90,7 +90,7 @@ module.exports = function(cb) {
         }
     });
 
-    logger.info('[DATABASE] Initialized Database SUCCESSFULLY')
+    logger.info('[DATABASE] Initialized Database SUCCESSFULLY');
     // Return the call back
     cb();
 };

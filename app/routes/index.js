@@ -7,11 +7,11 @@ var changeCase = require('change-case');
 var express = require('express');
 var routes = require('require-dir')();
 
-module.exports = function(app, passport) {
+module.exports = function (app, passport) {
     'use strict';
 
     // Initialize all routes
-    Object.keys(routes).forEach(function(routeName) {
+    Object.keys(routes).forEach(function (routeName) {
         var router = express.Router();
         // You can add some middleware here
         // router.use(someMiddleware);
@@ -23,9 +23,9 @@ module.exports = function(app, passport) {
         app.use('/' + changeCase.paramCase(routeName), router);
     });
 
-    app.use(function(req, res, next) {
+    app.use(function (req, res, next) {
         res.status(404).render("missing_page", {
-            "authstate" : req.isAuthenticated()
+            "authstate": req.isAuthenticated()
         });
     });
 

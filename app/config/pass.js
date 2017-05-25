@@ -48,4 +48,4 @@ module.exports = function(app, passport) {
     };
 
     passport.use(new LocalStrategy({usernameField: 'username', session: true}, lookupUser));
-}
+};
