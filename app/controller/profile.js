@@ -63,7 +63,6 @@ module.exports = {
                 return false;
             }
         }
-        console.log(data.password);
         return data;
     }
 
