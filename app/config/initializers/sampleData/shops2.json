@@ -1,0 +1,1423 @@
+[
+  {
+    "name": "Da Com Restaurant",
+    "latitude": 52.52517,
+    "longitude": 13.41074,
+    "address": "Rosa-Luxemburg-Straße 20, 10178 Berlin, Deutschland",
+    "description": "Asiatisch",
+    "items": [
+      {
+        "name": "Dremel 3000 Rotary Tool",
+        "price": 63.32
+      },
+      {
+        "name": "Dixon Valve Air Chief Industrial Quick Connect Fittings - Dc25 Septls238dc25",
+        "price": 87.54
+      },
+      {
+        "name": "Hitachi 18 V Post Li-ion Driver Drill",
+        "price": 2.78
+      },
+      {
+        "name": "Hitachi 3/8\" Drill",
+        "price": 51.53
+      },
+      {
+        "name": "Irwin 5-3/8 24t Marathon Cordless Circular Saw Blade",
+        "price": 0.3
+      },
+      {
+        "name": "Bostitch 6 Amp Orbital Jig Saw, Bte340k",
+        "price": 69.19
+      },
+      {
+        "name": "Lumberjack Tools Tac1500 1-1/2-inch Commercial Series Tenon Cutter",
+        "price": 67.68
+      },
+      {
+        "name": "Wagan Cordless Spotlight Compressor",
+        "price": 54.44
+      },
+      {
+        "name": "Bostitch 100 Ft Air Compressor Hose Prozhoze, 3/8\" X 100, Pro-38100",
+        "price": 96.56
+      },
+      {
+        "name": "Hitachi 18v Lithium-ion 4 1/2\" Angle Grinder (tool Body Only)",
+        "price": 1.86
+      }
+    ]
+  },
+  {
+    "name": "Dulures",
+    "latitude": 52.52378,
+    "longitude": 13.40927,
+    "address": "Rosa-Luxemburg-Straße 7, 10178 Berlin, Deutschland",
+    "description": "Mexikanisch",
+    "items": [
+      {
+        "name": "Dewalt Speed Tip 14 Piece Titanium Drill Bit Set Dw1341",
+        "price": 22.8
+      },
+      {
+        "name": "Speare Tools Adjustable Quick-cutter Hole Saw, Ab 1027",
+        "price": 67.31
+      },
+      {
+        "name": "Weller Analog Soldering Station, Wes51",
+        "price": 0.45
+      },
+      {
+        "name": "Powryte 1/2\" Rocking Dog Air Impact Wrench, 100103a",
+        "price": 61.65
+      },
+      {
+        "name": "Dual-temp Mini Glue Gun Kit, Red Dual-temp Mini Glue Gun Kit, Red",
+        "price": 86.42
+      },
+      {
+        "name": "Custom Accessories 59008 250-psi Compressor",
+        "price": 40.48
+      },
+      {
+        "name": "Wagner Ht1000 Heat Tool",
+        "price": 94.53
+      },
+      {
+        "name": "Black & Decker 3-speed Rtx Rotary Tool With Bonus Spring Clamps, Rtx-6",
+        "price": 40.67
+      },
+      {
+        "name": "Wagner Ht1000 Heat Tool",
+        "price": 54.46
+      },
+      {
+        "name": "Campbell Hausfeld Brad Nailer And Stapler",
+        "price": 5.25
+      }
+    ]
+  },
+  {
+    "name": "Wat to Wolk",
+    "latitude": 52.52388,
+    "longitude": 13.40927,
+    "address": "Alexanderplatz, Rosa-Luxemburg-Straße 7, 10178 Berlin, Deutschland",
+    "description": "Asiatisch",
+    "items": [
+      {
+        "name": "Surebonder Cordless High Temperature Glue Gun",
+        "price": 85.52
+      },
+      {
+        "name": "Porter Cable 352vs 3\" X 21\" Variable Speed Belt Sander",
+        "price": 97.06
+      },
+      {
+        "name": "Black & Decker Random Orbit Sander, Ro100",
+        "price": 69.22
+      },
+      {
+        "name": "Great Neck Saw 17612 Soldering Iron",
+        "price": 46.64
+      },
+      {
+        "name": "Wilmar Electric Impact Gun Set 1/2 Dr",
+        "price": 31.16
+      },
+      {
+        "name": "Bostitch Low-profile Paper Tape Framing Nailer, Lpf33pt",
+        "price": 35.3
+      },
+      {
+        "name": "California Air Tools 4.6 Gallon Ultra Quiet And Oil-free 2.0 Hp Aluminum Twin Tank Air Compressor",
+        "price": 22.53
+      },
+      {
+        "name": "Diteq Gasket Core Drills Accessories",
+        "price": 64.3
+      },
+      {
+        "name": "Mini Glue Sticks 4\" 25/pkg-gold/silver",
+        "price": 21.05
+      },
+      {
+        "name": "Hanson #8 Torx Bit",
+        "price": 88.06
+      }
+    ]
+  },
+  {
+    "name": "L'Kosterio",
+    "latitude": 52.52368,
+    "longitude": 13.4103,
+    "address": "Memhardstraße 3, 10178 Berlin, Deutschland",
+    "description": "Italienisch",
+    "items": [
+      {
+        "name": "Dremel 4200 Rotary Tool With Ez Change, 4200-6/40",
+        "price": 90.3
+      },
+      {
+        "name": "Crawford 38 In. Adjustable Steel Sawhorse",
+        "price": 6.98
+      },
+      {
+        "name": "Dremel Minimite Rotary Tool W/bonus Tools Set & Bag",
+        "price": 83.88
+      },
+      {
+        "name": "Campbell Hausfeld 2-1/2 Finish Nailer (16 Gauge)",
+        "price": 31.44
+      },
+      {
+        "name": "Eclipse 902-133 Solder Tip For 900-066n Solder Station 1.0 Mm Dia Pencil Tip",
+        "price": 42.22
+      },
+      {
+        "name": "Skil 2260-01 18-volt Cordless 3/8-inch Drill/driver Kit",
+        "price": 80.09
+      },
+      {
+        "name": "Wagan Cordless Spotlight Compressor",
+        "price": 30.95
+      },
+      {
+        "name": "Hitachi Ds18dsal 18-volt Li-ion Compact Driver Drill With Flashlight",
+        "price": 5.86
+      },
+      {
+        "name": "Bostitch 8.5 Amp Orbital Reciprocating Saw, Bte360k",
+        "price": 65.37
+      },
+      {
+        "name": "Black & Decker 12-volt Cordless Air Station Inflator",
+        "price": 77.46
+      }
+    ]
+  },
+  {
+    "name": "Bäckerei Fünfzig",
+    "latitude": 52.52341,
+    "longitude": 13.41067,
+    "address": "Karl-Liebknecht-Str. 23, 10178 Berlin, Deutschland",
+    "description": "Bäckerei",
+    "items": [
+      {
+        "name": "Black & Decker 12-volt Matrix Drill, Bdcdmt112",
+        "price": 39.75
+      },
+      {
+        "name": "Gmc Power Equipment 6.3 Gallon Gmc Syclone 6310 Ultra Quiet And Oil-free Air Compressor",
+        "price": 5.76
+      },
+      {
+        "name": "Dual-temp Ultra Glue Gun, Red",
+        "price": 55.39
+      },
+      {
+        "name": "Black & Decker Matrix Trim Saw Head Attachment, Bdcmtts",
+        "price": 59.24
+      },
+      {
+        "name": "Campbell Hausfeld 2 Brad Nailer (18 Guage)",
+        "price": 73.8
+      },
+      {
+        "name": "Porter Cable 352vs 3\" X 21\" Variable Speed Belt Sander",
+        "price": 45.77
+      },
+      {
+        "name": "Dualsaw Destroyer Cs650 Saw, Refurbished",
+        "price": 85.65
+      },
+      {
+        "name": "Hitachi 12v Peak Li-ion 2 Speed Drill/driver",
+        "price": 44.25
+      },
+      {
+        "name": "Campbell-hausfeld Mp5142 Air Chuck With Gauge",
+        "price": 11.19
+      },
+      {
+        "name": "Buffalo Tools Pro Series Angle Grinding Kit",
+        "price": 19.89
+      }
+    ]
+  },
+  {
+    "name": "BONO Sushi & Noodles",
+    "latitude": 52.52286,
+    "longitude": 13.40985,
+    "address": "Karl-Liebknecht-Str. 13A, 10178 Berlin, Deutschland",
+    "description": "Asiatisch",
+    "items": [
+      {
+        "name": "Fein Asb 14 + Afmm 14 14.4v, 4ah, Cordless Fmm + Hammer Drill",
+        "price": 34.42
+      },
+      {
+        "name": "Ad Tech 2-temp Full Size Cordless Glue Gun",
+        "price": 25.29
+      },
+      {
+        "name": "Lincoln Industrial 14.4 Volt Powerlube Kit - 2 Battery",
+        "price": 8.24
+      },
+      {
+        "name": "Dewalt Dck413s2 12-volt Li-ion 4-tool Combo Kit",
+        "price": 78.76
+      },
+      {
+        "name": "Ingersoll Rand 244a 1/2-inch Drive Super Duty Impact Wrench",
+        "price": 70.85
+      },
+      {
+        "name": "Black And Decker 20v Max Lithium Drill And Circular Saw Kit, Bdcd220rs",
+        "price": 73.13
+      },
+      {
+        "name": "Stanley Sharpshooter Stapler, Tr250a",
+        "price": 31.96
+      },
+      {
+        "name": "Forney 72725 Wire Wheel Brush Coarse Crimped With 1/4-inch Hex Shank 1-1/2-inch-by-.012-inch",
+        "price": 34.65
+      },
+      {
+        "name": "All Purpose Stik Mini Glue Sticks, .27\" X 4\", 100/pkg",
+        "price": 75.9
+      },
+      {
+        "name": "Stanley Fatmax Value Bundle",
+        "price": 93.93
+      }
+    ]
+  },
+  {
+    "name": "Elbesilber",
+    "latitude": 52.52317,
+    "longitude": 13.4092,
+    "address": "Rosa-Luxemburg-Straße 2, 10178 Berlin, Deutschland",
+    "description": "Deutsch",
+    "items": [
+      {
+        "name": "Surebonder Ultra-full Size Dual Temperature Glue Gun",
+        "price": 28.32
+      },
+      {
+        "name": "Campbell Hausfeld Exteme Duty 3/8 Air Ratchet",
+        "price": 4.9
+      },
+      {
+        "name": "Campbell Hausfeld Gravity-feed Spray Gun With Grab N Go Case",
+        "price": 22.99
+      },
+      {
+        "name": "Stanley Sharpshooter Stapler, Tr250a",
+        "price": 22.42
+      },
+      {
+        "name": "Campbell Hausfeld 8gal Oil Free Air Compressor",
+        "price": 22.47
+      },
+      {
+        "name": "Mini Glue Sticks 4\" 25/pkg-gold/silver",
+        "price": 86.56
+      },
+      {
+        "name": "Crawford Storehorse Folding Sawhorse",
+        "price": 64.9
+      },
+      {
+        "name": "Rockwell Shopseries 4-1/2\" Angle Grinder",
+        "price": 19.67
+      },
+      {
+        "name": "Black & Decker 109-piece Basic Project Set, 71-0109",
+        "price": 84.21
+      },
+      {
+        "name": "Bostitch 6 Amp Orbital Jig Saw And Bonus Jig Saw Blade Bundle",
+        "price": 82.51
+      }
+    ]
+  },
+  {
+    "name": "Modoma",
+    "latitude": 52.52328,
+    "longitude": 13.40823,
+    "address": "Dircksenstraße 37, 10178 Berlin, Deutschland",
+    "description": "Vietnamesisch",
+    "items": [
+      {
+        "name": "Skil 5480-01 7-1/4-inch Skilsaw Circular Saw",
+        "price": 68.18
+      },
+      {
+        "name": "Kd Tools Engraver Electric Vibro",
+        "price": 18.95
+      },
+      {
+        "name": "Hitachi 18v Lithium-ion 1/2\" Hammer Drill (tool Body Only)",
+        "price": 90.42
+      },
+      {
+        "name": "Black & Decker 56-piece Project Kit With 7.2v Lithium Drill/driver, Ldx112pk",
+        "price": 8.56
+      },
+      {
+        "name": "Apex Tool Group, Llc-tools 7135w Soldering Gun Tip",
+        "price": 17.06
+      },
+      {
+        "name": "Crawford Storehorse 36\" Sawhorse W/top Protector",
+        "price": 38.65
+      },
+      {
+        "name": "Mini Glue Sticks 4\" 25/pkg-opal/glitter",
+        "price": 64.45
+      },
+      {
+        "name": "Eclipse 900-250 Solder Aid Tool Set W/reverse Tweezers And Heat Sink",
+        "price": 94.14
+      },
+      {
+        "name": "Ad Tech Hi-temp Mini Size Glue Gun",
+        "price": 76.16
+      },
+      {
+        "name": "Black & Decker 1/4-sheet Sander With Filtered Dust Collection",
+        "price": 57.86
+      }
+    ]
+  },
+  {
+    "name": "THAI OUTSIDE",
+    "latitude": 52.52334,
+    "longitude": 13.40819,
+    "address": "Dircksenstraße 37, 10178 Berlin, Deutschland",
+    "description": "Asiatisch",
+    "items": [
+      {
+        "name": "Dremel 200-n/15 120v 2-speed Rotary Tool",
+        "price": 60.27
+      },
+      {
+        "name": "Master Magnetics 07047 Neodymium Disc Magnets - 3-pack",
+        "price": 83.94
+      },
+      {
+        "name": "50 Air Hose Reel",
+        "price": 88.51
+      },
+      {
+        "name": "Rockwell Shopseries 4-1/2\" Angle Grinder",
+        "price": 28.46
+      },
+      {
+        "name": "Stack-on 66\" Steel Workbench",
+        "price": 64.15
+      },
+      {
+        "name": "Alphafry Soldering Paste Flux & Brush Am51011",
+        "price": 76.66
+      },
+      {
+        "name": "Cgw Abrasives Z-thru Flap Discs - 4 1/2 X 7/8 Z-80 T27 Z-thru Flap Disc",
+        "price": 89.1
+      },
+      {
+        "name": "Stack-on 66\" Steel Workbench",
+        "price": 37.47
+      },
+      {
+        "name": "Campbell Hausfeld 34-piece Gravity Feed Spray Gun Kit",
+        "price": 92.72
+      },
+      {
+        "name": "Campbell Hausfeld 1-1/4 Brad Nailer Kit",
+        "price": 96.66
+      }
+    ]
+  },
+  {
+    "name": "Yolo Frozen Yogurt",
+    "latitude": 52.52427,
+    "longitude": 13.40797,
+    "address": "Münzstraße 11C, 10178 Berlin, Deutschland",
+    "description": "Frozen Yogurt",
+    "items": [
+      {
+        "name": "Bostitch Prozhoze, 1/4\" X 100, Hopb14100",
+        "price": 62.53
+      },
+      {
+        "name": "Stanley Sharpshooter Stapler, Tr250a",
+        "price": 60.86
+      },
+      {
+        "name": "Lumberjack Tools Ttr0500 1/2in Pro Series Tenon Cutter",
+        "price": 79.77
+      },
+      {
+        "name": "Kawasaki Heavy Duty 0.5 6.6a Hammer Drill",
+        "price": 3.62
+      },
+      {
+        "name": "Lumberjack Tools Hsk2 Home Series 2-piece Starter Kit",
+        "price": 92.19
+      },
+      {
+        "name": "Pentagon Professional Aluminum Drywall Bench",
+        "price": 16.54
+      },
+      {
+        "name": "Dsr Schumacher Psj-2212 Pro Series 2200 Amp Jump Starter",
+        "price": 47.77
+      },
+      {
+        "name": "Bostitch Industrial Air Tool Swivel Plug, 1/4 Npt, Btfp72333",
+        "price": 17.58
+      },
+      {
+        "name": "Black And Decker Dragster 3\" X 21\" Belt Sander, Ds321",
+        "price": 56.37
+      },
+      {
+        "name": "Stanley Fatmax 20-volt Lithium Cordless Hammer Drill, Fmc620la",
+        "price": 53.19
+      }
+    ]
+  },
+  {
+    "name": "Restaurant Yoga",
+    "latitude": 52.52375,
+    "longitude": 13.40714,
+    "address": "Rochstraße 5, 10178 Berlin, Deutschland",
+    "description": "Amerikanisch",
+    "items": [
+      {
+        "name": "Black & Decker 109-piece Basic Project Set, 71-0109",
+        "price": 25.02
+      },
+      {
+        "name": "Drill America Cone Carbide Burr 1/4 Shank",
+        "price": 94.64
+      },
+      {
+        "name": "Bosch/rotozip/skil 2354-01 4-volt Lithium Ion Cordless Screwdriver",
+        "price": 34.86
+      },
+      {
+        "name": "Eclipse Pz3x1-15/16 Bit Pozidrive Size 3 1-15/16in Long 1/4in Hex",
+        "price": 20.49
+      },
+      {
+        "name": "Primefit Garage Inflator With Air Accessory Kit And Storage Case",
+        "price": 47.66
+      },
+      {
+        "name": "Bosch 4100-09 10\" 4.4 Hp Worksite Table Saw",
+        "price": 52.44
+      },
+      {
+        "name": "Black & Decker Matrix Combo Kit, 20v Drill And Trim Saw, Bdcdmt120ts",
+        "price": 19.04
+      },
+      {
+        "name": "Campbell Hausfeld 62 Piece Air Tool Kit",
+        "price": 57.94
+      },
+      {
+        "name": "Bostitch 18v Lithium 1/2\" Drill/driver Kit, Btc400lb",
+        "price": 71.26
+      },
+      {
+        "name": "Hanson #8 Torx Bit",
+        "price": 76.12
+      }
+    ]
+  },
+  {
+    "name": "Café Magenta",
+    "latitude": 52.52438,
+    "longitude": 13.40884,
+    "address": "Münzstraße 8, 10178 Berlin, Deutschland",
+    "description": "Café",
+    "items": [
+      {
+        "name": "Microflex Mxbd-1000-pf Black Dragon X-small Latex Fully Textured Gloves",
+        "price": 99.16
+      },
+      {
+        "name": "Master Magnetics 07047 Neodymium Disc Magnets - 3-pack",
+        "price": 5.75
+      },
+      {
+        "name": "Primefit Garage Inflator With Air Accessory Kit And Storage Case",
+        "price": 18.33
+      },
+      {
+        "name": "Sold & Shipped By Wayfair.com",
+        "price": 68.14
+      },
+      {
+        "name": "Eclipse Pz2x1-15/16 Bit Pozidrive Size 2 1-15/16in Long 1/4in Hex",
+        "price": 8.8
+      },
+      {
+        "name": "Surebonder Wide Crown Pneumatic Stapler",
+        "price": 18.08
+      },
+      {
+        "name": "Aaa 250psi 6-in-1 Air Compressor",
+        "price": 57.64
+      },
+      {
+        "name": "Rockwell Shopseries 18-volt Cordless Combo Kit, 3pc",
+        "price": 43.11
+      },
+      {
+        "name": "Jewelers Chasing Hammer - 1 Inch Head - Metal Smithing",
+        "price": 46.07
+      },
+      {
+        "name": "Dremel Saw-max Tool Kit, Sm20-03",
+        "price": 58.63
+      }
+    ]
+  },
+  {
+    "name": "Mikita",
+    "latitude": 52.52686,
+    "longitude": 13.40773,
+    "address": "Alte Schönhauser Str. 13, 10119 Berlin, Deutschland",
+    "description": "Asiatisch",
+    "items": [
+      {
+        "name": "Skil 74102 10in 200 Tooth Steel Circular Saw Blade",
+        "price": 5.49
+      },
+      {
+        "name": "Arrow Fastener Plier Type Stapler",
+        "price": 69.16
+      },
+      {
+        "name": "Pentagon Tools 3/8 300psi Heavy Duty Retractable 100 Foot Air Hose & Reel Professional Grade",
+        "price": 24.86
+      },
+      {
+        "name": "Vim Products 10mm Triple Square Bit",
+        "price": 19.81
+      },
+      {
+        "name": "Motor Trend Cpm-0610 110-volt Ac Home Air Compressor",
+        "price": 87.06
+      },
+      {
+        "name": "Titan Master Drill & Bit 204pc Set W/4fold Cs",
+        "price": 52.24
+      },
+      {
+        "name": "Stanley Fatmax 7a Hammer Drill, Fme140",
+        "price": 20.68
+      },
+      {
+        "name": "Guardair The Inforcer Air Gun W/60 Aluminum Ext. & Contractor Nozzle",
+        "price": 19.17
+      },
+      {
+        "name": "Legacy Manufacturing Leghfz3850yw2 Flexzilla 3/8in X 50yd Yellow Air Hose With 1/4 Inch Mnpt Ends",
+        "price": 93.03
+      },
+      {
+        "name": "Comstar 10-100 Copper Lock No-heat Solder - 2 Oz.",
+        "price": 63.11
+      }
+    ]
+  },
+  {
+    "name": "Caffee Nashorn",
+    "latitude": 52.52667,
+    "longitude": 13.40762,
+    "address": "Alte Schönhauser Str. 14-15, 10119 Berlin, Deutschland",
+    "description": "Café",
+    "items": [
+      {
+        "name": "Bosch 2250-01 14.4 Volt Single Speed Cordless Drill And Driver",
+        "price": 90.73
+      },
+      {
+        "name": "Hitachi 12v Peak Li-ion 2 Speed Drill/driver",
+        "price": 82.4
+      },
+      {
+        "name": "Hitachi 2 Hp 4-gal Compressor",
+        "price": 27.69
+      },
+      {
+        "name": "Black And Decker Inc Dcf895d2 20v Max Brushless . 25 Inch Hex 3-speed . 25 Inch Impact Driver",
+        "price": 11.44
+      },
+      {
+        "name": "Tennsco Corp. Plastic Laminate Top Workbench With Shelf, Rails & Riser",
+        "price": 21.42
+      },
+      {
+        "name": "Skil 9296-01 4.5in Paddle Switch Angle Grinder",
+        "price": 3.08
+      },
+      {
+        "name": "Freud 12 44t Diablo General Purpose Chop/slide Miter Saw Blade D1244x",
+        "price": 60.63
+      },
+      {
+        "name": "Kd Tools Engraver Electric Vibro",
+        "price": 23.4
+      },
+      {
+        "name": "Hitachi 18-volt Lithium-ion 3 Tool Combo Kit",
+        "price": 79.02
+      },
+      {
+        "name": "Shark Sr062-10 Ammco Style 10 Pack Negative Rake Bits",
+        "price": 59.69
+      }
+    ]
+  },
+  {
+    "name": "Monsieur Json",
+    "latitude": 52.52659,
+    "longitude": 13.40786,
+    "address": "Alte Schönhauser Str. 46, 10119 Berlin, Deutschland",
+    "description": "Vietnamesisch",
+    "items": [
+      {
+        "name": "Goodyear Heavy Duty I8000 120 Volt Direct Drive Inflator",
+        "price": 17.89
+      },
+      {
+        "name": "Hitachi 2 1/2\" Coil Siding Nailer",
+        "price": 38.72
+      },
+      {
+        "name": "Eclipse 900-259 Mini Soldering Station",
+        "price": 97.29
+      },
+      {
+        "name": "Retractable Screw-holder With Magnetic Tip",
+        "price": 79.27
+      },
+      {
+        "name": "Bostitch Industrial Air Tool Plug, 1/4 Npt, Btfp72318",
+        "price": 73.85
+      },
+      {
+        "name": "Lincoln Industrial Grease Gun Cordless With Case, Two Batteries",
+        "price": 35.26
+      },
+      {
+        "name": "Motor Trend Cpm-0610 110-volt Ac Home Air Compressor",
+        "price": 68.71
+      },
+      {
+        "name": "Buffalo Tools 19 Piece Hole Saw Set",
+        "price": 51.99
+      },
+      {
+        "name": "Black & Decker 5.5a Evs Scrolling/orbital Combination Jigsaw, Js700k",
+        "price": 99.08
+      },
+      {
+        "name": "Striker Adjustable Garage Parking Sensor",
+        "price": 62.93
+      }
+    ]
+  },
+  {
+    "name": "Cuore Da Roma",
+    "latitude": 52.52661,
+    "longitude": 13.40851,
+    "address": "Max-Beer-Straße 33, 10119 Berlin, Deutschland",
+    "description": "Italienisch",
+    "items": [
+      {
+        "name": "Skil 5995-01 18-volt 5-3/8\" Circular Saw",
+        "price": 18.23
+      },
+      {
+        "name": "Buffalo Tools Stainless Steel Work Table",
+        "price": 81.56
+      },
+      {
+        "name": "Black & Decker 1/4 Sheet Finisher Sander, Fs540",
+        "price": 65.67
+      },
+      {
+        "name": "Kawasaki 6 Bench Grinder",
+        "price": 24.79
+      },
+      {
+        "name": "Ingersoll Rand 1/2 Air Impact Wrench 231ha",
+        "price": 10.19
+      },
+      {
+        "name": "Skil 1400-02 Multi-tasker 2.0a Oscillating Tool Kit",
+        "price": 80.32
+      },
+      {
+        "name": "Dual-temp Mini Glue Gun Kit, Red",
+        "price": 10.22
+      },
+      {
+        "name": "Stalwart 0.5\" Chuck Hammer Drill",
+        "price": 46.53
+      },
+      {
+        "name": "Black And Decker 3.6 Volt Lithium Ion Screwdriver, Li3100",
+        "price": 8.33
+      },
+      {
+        "name": "Surebonder Ultra-mini Dual Temperature Glue Gun",
+        "price": 42.72
+      }
+    ]
+  },
+  {
+    "name": "L'Ami Kalk",
+    "latitude": 52.52637,
+    "longitude": 13.40847,
+    "address": "Max-Beer-Straße 29, 10119 Berlin, Deutschland",
+    "description": "Italienisch",
+    "items": [
+      {
+        "name": "Black & Decker 68-piece Project Kit With 20v Lithium Drill/driver, Li2000pk",
+        "price": 90.24
+      },
+      {
+        "name": "Sharpe Manufacturing 6765-1 Replacement Dessicant Beads - 5 Lb.",
+        "price": 24.28
+      },
+      {
+        "name": "Campbell Hausfeld General Purpose Spray Gun",
+        "price": 51.34
+      },
+      {
+        "name": "Black & Decker 18-volt Cordless Drill, Gco18c",
+        "price": 77.86
+      },
+      {
+        "name": "Bostitch Prozhoze, 3/8\" X 50, Hopb3850",
+        "price": 97.69
+      },
+      {
+        "name": "Aaa 250psi 6-in-1 Air Compressor",
+        "price": 93.8
+      },
+      {
+        "name": "Dewalt Power Tools . 38inch Heavy-duty Vsr Pistol Grip Drill With Keyless Chuck Dwd",
+        "price": 74.04
+      },
+      {
+        "name": "Weller Welwes51 Analog Soldering Station With Power Unit, Soldering Pencil, Stand And Sponge",
+        "price": 48.05
+      },
+      {
+        "name": "Hitachi 18v Cordless Compact Pro Driver Drill With Flashlight",
+        "price": 86.87
+      },
+      {
+        "name": "Primefit Industrial-grade Retractable Air Hose Reel With 50 Rubber Air Hose",
+        "price": 24.58
+      }
+    ]
+  },
+  {
+    "name": "DE PHO",
+    "latitude": 52.52682,
+    "longitude": 13.40865,
+    "address": "Max-Beer-Straße 37, 10119 Berlin, Deutschland",
+    "description": "Asiatisch",
+    "items": [
+      {
+        "name": "Lincoln Industrial Fully Automatic Pneumatic Grease Gun",
+        "price": 59.96
+      },
+      {
+        "name": "Chicago Power Tools Power Drill Accessory Set, 75-piece",
+        "price": 73.51
+      },
+      {
+        "name": "Primefit Garage Inflator With Air Accessory Kit And Storage Case",
+        "price": 21.38
+      },
+      {
+        "name": "Campbell Hausfeld 50 Retractable Hose Reel",
+        "price": 28.83
+      },
+      {
+        "name": "Lumberjack Tools Ttr0500 1/2in Pro Series Tenon Cutter",
+        "price": 69.82
+      },
+      {
+        "name": "Freud 1/4 Radius V Groove Straight Router Bit 20-301",
+        "price": 52.54
+      },
+      {
+        "name": "Dual-temp Mini Glue Gun Kit, Red Dual-temp Mini Glue Gun Kit, Red",
+        "price": 60.17
+      },
+      {
+        "name": "Fs-curtis Ct5 5-hp 60-gallon Vertical Two-stage Air Compressor With Thermal Overload In Place Of Sta",
+        "price": 33.18
+      },
+      {
+        "name": "Makita Mklxt311fh 18 Volt Drill And Impact Kit",
+        "price": 21.52
+      },
+      {
+        "name": "Dewalt Power Tools Dck290l2 20 Volt Max Lithium Ion Hammerdrill-impact Driver Co",
+        "price": 79.79
+      }
+    ]
+  },
+  {
+    "name": "Charles Restaurant",
+    "latitude": 52.52446,
+    "longitude": 13.40962,
+    "address": "Rosa-Luxemburg-Straße 9-11, 10178 Berlin, Deutschland",
+    "description": "Hochwertig",
+    "items": [
+      {
+        "name": "Skil 2350-01 4-volt Lithium-ion Screwdriver And Led Flashlight",
+        "price": 16.77
+      },
+      {
+        "name": "Vermont American 10 60 Tpi 10x Titanium Carbide Circular Saw Blades 27833",
+        "price": 95.63
+      },
+      {
+        "name": "Superior Tool 2\" Pvc Pipe Cutter",
+        "price": 50.48
+      },
+      {
+        "name": "Hopkins-f3 Brands 90158 Workbench Kit",
+        "price": 96.77
+      },
+      {
+        "name": "Mini Glue Sticks 4\" 25/pkg-opal/glitter",
+        "price": 0.25
+      },
+      {
+        "name": "Black & Decker 2.4v Direct Plug Screwdriver, Dp240",
+        "price": 42.7
+      },
+      {
+        "name": "Hitachi 18v Lithium-ion Cordless Impact Driver W/120-pc Drill/drive Set",
+        "price": 53.31
+      },
+      {
+        "name": "Bosch Power Tools 29 Piece High Speed Steel Drill Set With Metal Case 96029",
+        "price": 8.73
+      },
+      {
+        "name": "Premiere Pads Premiere Pads 50 \"400\" Series Stainless Steel Scrubbers Large Pad50",
+        "price": 70.44
+      },
+      {
+        "name": "Skil Mag77lt 7-1/4in 15 Amp Circular Saw",
+        "price": 38.54
+      }
+    ]
+  },
+  {
+    "name": "Kroshnek",
+    "latitude": 52.52508,
+    "longitude": 13.41012,
+    "address": "Rosa-Luxemburg-Straße 17, 10178 Berlin, Deutschland",
+    "description": "Café",
+    "items": [
+      {
+        "name": "Surebonder Cordless High Temperature Glue Gun",
+        "price": 11.87
+      },
+      {
+        "name": "Hitachi 18v Lithium-ion Combo Kit With 2 Canvas Bags",
+        "price": 14.12
+      },
+      {
+        "name": "Buffalo Tools 19 Piece Hole Saw Set",
+        "price": 41.77
+      },
+      {
+        "name": "Hitachi 4 Gallon Twin Stack Air Compressor",
+        "price": 94.62
+      },
+      {
+        "name": "Wagner Ht1000 Heat Tool",
+        "price": 90.63
+      },
+      {
+        "name": "Black & Decker 56-piece Project Kit With 7.2v Lithium Drill/driver, Ldx112pk",
+        "price": 52.6
+      },
+      {
+        "name": "Dremel Lawn And Garden Rotary Tool Kit, 100-lg",
+        "price": 76.17
+      },
+      {
+        "name": "Astro Pneumatic Grease Gun Mini 3oz Cap W/ Needle Nozzle",
+        "price": 0.51
+      },
+      {
+        "name": "Bosch 4395-01 Orbital Action Jigsaw",
+        "price": 30.04
+      },
+      {
+        "name": "Ingersoll Rand 244a 1/2-inch Drive Super Duty Impact Wrench",
+        "price": 38.63
+      }
+    ]
+  },
+  {
+    "name": "Kiez Döner",
+    "latitude": 52.52791,
+    "longitude": 13.41009,
+    "address": "Rosa-Luxemburg-Straße 49, 10178 Berlin, Deutschland",
+    "description": "Döner",
+    "items": [
+      {
+        "name": "Aaa 300psi Air Compressor",
+        "price": 50.29
+      },
+      {
+        "name": "Dremel Circle Cutter Attachment, 678-01",
+        "price": 20.52
+      },
+      {
+        "name": "Bostitch 3/8\" Air Ratchet, Btmt72392",
+        "price": 1.45
+      },
+      {
+        "name": "Surebonder Ultra-full Size Dual Temperature Glue Gun",
+        "price": 42.25
+      },
+      {
+        "name": "Gyros 40-00470 Powerpro Variable Speed Rotary Tool Tool Only",
+        "price": 11.67
+      },
+      {
+        "name": "Black & Decker Lithium-ion Smartdriver With Exclusive Magnetic Screw-holder",
+        "price": 95.14
+      },
+      {
+        "name": "Black And Decker 3/8\" 5-amp Variable Speed Drill With Keyless Chuck, Dr260b",
+        "price": 84.05
+      },
+      {
+        "name": "Black & Decker 18v Hiper Drill And Accessory Set, Hpd18ak-2",
+        "price": 27.76
+      },
+      {
+        "name": "Dewalt Power Tools 7-. 25inch Worm Drive Circular Saw Dws535",
+        "price": 49.19
+      },
+      {
+        "name": "Eclipse 902-134 Solder Tip For 900-066n Solder Station",
+        "price": 48.47
+      }
+    ]
+  },
+  {
+    "name": "Shalala",
+    "latitude": 52.52554,
+    "longitude": 13.40795,
+    "address": "Max-Beer-Straße 13, 10119 Berlin, Deutschland",
+    "description": "Asiatisch",
+    "items": [
+      {
+        "name": "Wolo Manufacturing 800compressor Model 800 Tiger 2. 5 Liter Tank And Air Compressor",
+        "price": 23.75
+      },
+      {
+        "name": "Skil 4-position Orbital Jigsaw With Laser Guide, 4495-02",
+        "price": 23.62
+      },
+      {
+        "name": "Astro Pneumatic 223k Air Belt Sander",
+        "price": 8.25
+      },
+      {
+        "name": "Bostitch Air Regulator And Gauge, Threaded, #mregulator",
+        "price": 65.76
+      },
+      {
+        "name": "Aaa 300psi Air Compressor",
+        "price": 44.14
+      },
+      {
+        "name": "Black & Decker 4.5 Amp Variable Speed Jigsaw, Js515ozr",
+        "price": 42.35
+      },
+      {
+        "name": "Rockwell Shopseries 18-volt Cordless Drill/driver Kit",
+        "price": 51.52
+      },
+      {
+        "name": "Black & Decker 20v Smart Select Cordless Drill",
+        "price": 7.87
+      },
+      {
+        "name": "Weller Analog Soldering Station, Wes51",
+        "price": 32.94
+      },
+      {
+        "name": "Mk Diamond Mk-370exp 7-inch Wet Cutting Tile Saw",
+        "price": 76.39
+      }
+    ]
+  },
+  {
+    "name": "James Bondy Brooks",
+    "latitude": 52.52581,
+    "longitude": 13.40734,
+    "address": "Alte Schönhauser Str. 36, 10119 Berlin, Deutschland",
+    "description": "Eisladen",
+    "items": [
+      {
+        "name": "Dewalt Dck413s2 12-volt Li-ion 4-tool Combo Kit",
+        "price": 19.62
+      },
+      {
+        "name": "Diteq Gasket Core Drills Accessories",
+        "price": 50.25
+      },
+      {
+        "name": "Arrow Fastener Dual Purpose Stapler",
+        "price": 89.25
+      },
+      {
+        "name": "Campbell Hausfeld 50 Retractable Hose Reel",
+        "price": 5.27
+      },
+      {
+        "name": "Ad Tech 2-temp Full Size Cordless Glue Gun",
+        "price": 44.38
+      },
+      {
+        "name": "Wagner Ht1000 Heat Tool",
+        "price": 58.57
+      },
+      {
+        "name": "Weller Sp80l Medium Duty Soldering Iron",
+        "price": 13.69
+      },
+      {
+        "name": "Powryte 1/2\" Rocking Dog Air Impact Wrench, 100103a",
+        "price": 85.13
+      },
+      {
+        "name": "Dremel Two Speed Rotary Tool Kit With 15 Accessories 200-1-15",
+        "price": 47.53
+      },
+      {
+        "name": "Gorilla Rack 4 Ft. Heavy-duty Workbench",
+        "price": 98.13
+      }
+    ]
+  },
+  {
+    "name": "Kaffeemotte",
+    "latitude": 52.52521,
+    "longitude": 13.4061,
+    "address": "Weinmeisterstraße 9A, 10178 Berlin, Deutschland",
+    "description": "Café",
+    "items": [
+      {
+        "name": "Dewalt Tools Dwtdc385k Hd Srp 18v Cordless Reciprocating Saw Kit",
+        "price": 0.91
+      },
+      {
+        "name": "Stalwart 25-piece 4.8-volt Cordless Screwdriver With Led",
+        "price": 46.85
+      },
+      {
+        "name": "Ingersoll Rand 1/2 Titanium Imp Wr W/2 Ext",
+        "price": 6.62
+      },
+      {
+        "name": "Porter Cable 1/2 18v Cordless Driver",
+        "price": 34.53
+      },
+      {
+        "name": "Dremel Universal Carbide Flush Cut Blade, Mm485",
+        "price": 10.05
+      },
+      {
+        "name": "Bosch 6335-01 7 Amp 1/2\" Corded Drill",
+        "price": 70.48
+      },
+      {
+        "name": "Vermont American 10 60 Tpi 10x Titanium Carbide Circular Saw Blades 27833",
+        "price": 57.77
+      },
+      {
+        "name": "Surebonder Full Size Low Temperature Glue Gun",
+        "price": 24.64
+      },
+      {
+        "name": "Surebonder Full Size High Temperature Glue Gun",
+        "price": 79.17
+      },
+      {
+        "name": "Skil 120v 1-3/4 Hp Fixed Base Router, 1817",
+        "price": 1.38
+      }
+    ]
+  },
+  {
+    "name": "The Palace",
+    "latitude": 52.52554,
+    "longitude": 13.41259,
+    "address": "Hirtenstraße 4, 10178 Berlin, Deutschland",
+    "description": "Hochwertig",
+    "items": [
+      {
+        "name": "Skil 7-1/4\" 40-tooth Carbide Tipped Circular Saw Blade, 75740w",
+        "price": 84.23
+      },
+      {
+        "name": "Black And Decker Platinum 20v Drill/driver With 2 Batteries, Ldx120p-2",
+        "price": 13.14
+      },
+      {
+        "name": "Hitachi 4\" 5 Amp Angle Grinder",
+        "price": 74.11
+      },
+      {
+        "name": "Black & Decker 7.25\" 12.0a Circular Saw, Cs1014",
+        "price": 73.48
+      },
+      {
+        "name": "Campbell Hausfeld Pistol Grip Blowgun",
+        "price": 43.8
+      },
+      {
+        "name": "3m 37717 Spray Trigger Nozzle Head",
+        "price": 9.96
+      },
+      {
+        "name": "Shark Sr062-10 Ammco Style 10 Pack Negative Rake Bits",
+        "price": 15.76
+      },
+      {
+        "name": "Guardair The Inforcer Air Gun W/60 Aluminum Ext. & Contractor Nozzle",
+        "price": 55.12
+      },
+      {
+        "name": "Bostitch Prozhoze, 3/8\" X 100, Hopb38100",
+        "price": 12.37
+      },
+      {
+        "name": "Bostitch 18v Lithium 1/2\" Drill/driver Kit And Bonus Drill Bit Set Bundle",
+        "price": 60.07
+      }
+    ]
+  },
+  {
+    "name": "Der junge Fritz",
+    "latitude": 52.52501,
+    "longitude": 13.41281,
+    "address": "Karl-Liebknecht-Str. 29, 10178 Berlin, Deutschland",
+    "description": "Hausmannskost",
+    "items": [
+      {
+        "name": "Kawasaki 10 Piece Screw Extractor And Drill Bit Set",
+        "price": 46.05
+      },
+      {
+        "name": "Bostitch 18v Lithium Drill/impact Combo Kit, Btck410l2",
+        "price": 29.14
+      },
+      {
+        "name": "Rockwell Shopseries 18-volt Cordless Drill/driver Kit",
+        "price": 58.71
+      },
+      {
+        "name": "Wagan Cordless Spotlight Compressor",
+        "price": 49.61
+      },
+      {
+        "name": "Dmt 8 Inch Duosharp Plus Benchstone Fine Coarse Wm8fc-wb",
+        "price": 6.82
+      },
+      {
+        "name": "Hitachi 2\" 18-gauge Finish Brad Nailer",
+        "price": 11.08
+      },
+      {
+        "name": "Black & Decker 7-1/4\" 15-amp Circular Saw, Cs1015",
+        "price": 86.2
+      },
+      {
+        "name": "Freud 1/4 Radius V Groove Straight Router Bit 20-301",
+        "price": 85.41
+      },
+      {
+        "name": "Hitachi 12v Cordless Drill/driver Kit",
+        "price": 78.3
+      },
+      {
+        "name": "Black And Decker 3/8\" 5-amp Variable Speed Drill With Keyless Chuck, Dr260b",
+        "price": 11.58
+      }
+    ]
+  },
+  {
+    "name": "Motte Lebensmittel",
+    "latitude": 52.52423,
+    "longitude": 13.4074,
+    "address": "Rochstraße 2, 10178 Berlin, Deutschland",
+    "description": "Allerlei",
+    "items": [
+      {
+        "name": "Bostitch 18v Lithium Drill/impact Combo Kit, Btck410l2",
+        "price": 63.18
+      },
+      {
+        "name": "Kawasaki 4.5 7.5a Vs Angle Grinder",
+        "price": 12.49
+      },
+      {
+        "name": "Black & Decker 20v Max Lithium Drill/driver, Ldx220sb",
+        "price": 81.15
+      },
+      {
+        "name": "Bosch/rotozip/skil 2354-02 4-volt I \" X 03 Cordless Screwdriver",
+        "price": 35.5
+      },
+      {
+        "name": "Skil 9295-01 4-1/2\" Angle Grinder",
+        "price": 20.63
+      },
+      {
+        "name": "Proxxon Engraving Tool",
+        "price": 34.23
+      },
+      {
+        "name": "Bostitch 6 Amp Orbital Jig Saw And Bonus Jig Saw Blade Bundle",
+        "price": 11.83
+      },
+      {
+        "name": "Bostitch 18v Lithium Drill/impact Combo Kit, Btck410l2",
+        "price": 56.18
+      },
+      {
+        "name": "Ad-tech: High-temp Glue Sticks, 5/16\" X 4\", 100pk",
+        "price": 80.57
+      },
+      {
+        "name": "Dual-temp Mini Glue Gun Kit, Red",
+        "price": 17.63
+      }
+    ]
+  },
+  {
+    "name": "Modoma 2",
+    "latitude": 52.52339,
+    "longitude": 13.4078,
+    "address": "Dircksenstraße 37-38, 10178 Berlin, Deutschland",
+    "description": "Asiatisch",
+    "items": [
+      {
+        "name": "Ad Tech Hi-temp Mini Size Glue Gun",
+        "price": 40.8
+      },
+      {
+        "name": "Vermont American 7 To 7-1/4 Masonry Circular Saw Blades 28052",
+        "price": 66.67
+      },
+      {
+        "name": "Hot Glue Gun Helpers Kit-7 Pieces",
+        "price": 9.06
+      },
+      {
+        "name": "Bernzomatic Aluminum Soldering Rods 019325/al3",
+        "price": 58.36
+      },
+      {
+        "name": "Campbell Hausfeld Dual Action Sander",
+        "price": 13
+      },
+      {
+        "name": "Ad-tech: High-temp Glue Sticks, 7/16\" X 4\", 50pk",
+        "price": 29.22
+      },
+      {
+        "name": "Fein Asb 14 + Afmm 14 14.4v, 4ah, Cordless Fmm + Hammer Drill",
+        "price": 60.88
+      },
+      {
+        "name": "Black & Decker Random Orbit Sander, Ro100",
+        "price": 22.68
+      },
+      {
+        "name": "12-volt Lith-ion Drill W/ Bonus Case & 150-piece Socket Set",
+        "price": 34.09
+      },
+      {
+        "name": "Bostitch Air Regulator & Gauge Kit, 1/4 Npt, Btfp72326",
+        "price": 44.19
+      }
+    ]
+  },
+  {
+    "name": "King Kong",
+    "latitude": 52.52512,
+    "longitude": 13.41028,
+    "address": "Rosa-Luxemburg-Straße 17, 10178 Berlin, Deutschland",
+    "description": "Sushi",
+    "items": [
+      {
+        "name": "Black & Decker 20v Max Lithium Drill/driver, Ldx220sb",
+        "price": 0.43
+      },
+      {
+        "name": "Wen 5.2 Amp Electric Pole Saw",
+        "price": 50.4
+      },
+      {
+        "name": "Ultra Steel 1.5 Amp Palm Sander",
+        "price": 38.7
+      },
+      {
+        "name": "Black & Decker Heat Gun",
+        "price": 42.94
+      },
+      {
+        "name": "Black And Decker 3-position Rechargeable Screwdriver, Li2000",
+        "price": 14.21
+      },
+      {
+        "name": "Dremel Mm20-03 Multi-max Tool Kit",
+        "price": 34.87
+      },
+      {
+        "name": "Black & Decker Workmate 425 550-pound Capacity Portable Work Bench, Wm425",
+        "price": 2.23
+      },
+      {
+        "name": "Black & Decker Matrix Combo Kit, 20v Drill And Jig Saw, Bdcdmt120js",
+        "price": 95.31
+      },
+      {
+        "name": "Black And Decker Dwdck280c2 20v Max Li-ion Compact Drill And Impact Combo Kit",
+        "price": 53.62
+      },
+      {
+        "name": "Hitachi 18v Lithium-ion Combo Kit With 2 Canvas Bags",
+        "price": 96.61
+      }
+    ]
+  }
+]
