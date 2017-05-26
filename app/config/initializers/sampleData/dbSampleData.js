@@ -12,11 +12,11 @@ var request = require('request');
 module.exports = function(cb) {
 
 
-    logger.info("[DATABSE] Filling database with sample data");
+    logger.info("[DATABASE] Filling database with sample data");
 
     var sampleUsers = require('./users.json');
     addUsers(sampleUsers, function (){
-        logger.info("[DATABSE] Filled database with sample data SUCCESSFULLY");
+        logger.info("[DATABASE] Filled database with sample data SUCCESSFULLY");
     });
 
 };
