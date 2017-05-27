@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "docker-compose up foodlane-test",
-    "start": "nodemon -L app.js"
+    "start": "nodemon -L --watch app/ --delay 4 --ignore node_modules/ app.js"
   },
   "author": "",
   "license": "ISC",
