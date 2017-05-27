@@ -11,7 +11,8 @@
       "password": "my_admin_password",
       "port": 5984,
       "database": "foodlane",
-      "sampleData": true
+      "sampleData": true,
+      "initSampleDataEverytime": true
     },
     "authConfig": {
       "secret": "mysecret",
