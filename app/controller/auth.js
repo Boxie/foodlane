@@ -63,7 +63,7 @@ module.exports = {
 
     register: function(data, cb){
 
-        if(data.password != data.repeatpassword){
+        if(data.password !== data.repeatpassword){
             cb (new Error("Passwords not equal"), null);
             return;
         }
@@ -76,7 +76,7 @@ module.exports = {
             email: function(callback){
                 var auth = require("./auth");
                 auth.uniqueEmail(data.email, callback);
-            },
+            }
         }, function(err, result){
             if(!err){
                 var auth = require("./auth");
@@ -113,7 +113,7 @@ module.exports = {
                 }
 
                 cb(new Error("Found more than 1 user with same credentials."));
-                return;
+
             }
         })
     },
@@ -135,4 +135,4 @@ module.exports = {
         };
         return user;
     }
-}
+};
