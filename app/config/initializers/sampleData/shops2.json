@@ -1,6 +1,6 @@
 [
   {
-    "name": "Da Com Restaurant",
+    "shopTitle": "Da Com Restaurant",
     "latitude": 52.52517,
     "longitude": 13.41074,
     "address": "Rosa-Luxemburg-Straße 20, 10178 Berlin, Deutschland",
@@ -49,7 +49,7 @@
     ]
   },
   {
-    "name": "Dulures",
+    "shopTitle": "Dulures",
     "latitude": 52.52378,
     "longitude": 13.40927,
     "address": "Rosa-Luxemburg-Straße 7, 10178 Berlin, Deutschland",
@@ -98,7 +98,7 @@
     ]
   },
   {
-    "name": "Wat to Wolk",
+    "shopTitle": "Wat to Wolk",
     "latitude": 52.52388,
     "longitude": 13.40927,
     "address": "Alexanderplatz, Rosa-Luxemburg-Straße 7, 10178 Berlin, Deutschland",
@@ -147,7 +147,7 @@
     ]
   },
   {
-    "name": "L'Kosterio",
+    "shopTitle": "L'Kosterio",
     "latitude": 52.52368,
     "longitude": 13.4103,
     "address": "Memhardstraße 3, 10178 Berlin, Deutschland",
@@ -196,7 +196,7 @@
     ]
   },
   {
-    "name": "Bäckerei Fünfzig",
+    "shopTitle": "Bäckerei Fünfzig",
     "latitude": 52.52341,
     "longitude": 13.41067,
     "address": "Karl-Liebknecht-Str. 23, 10178 Berlin, Deutschland",
@@ -245,7 +245,7 @@
     ]
   },
   {
-    "name": "BONO Sushi & Noodles",
+    "shopTitle": "BONO Sushi & Noodles",
     "latitude": 52.52286,
     "longitude": 13.40985,
     "address": "Karl-Liebknecht-Str. 13A, 10178 Berlin, Deutschland",
@@ -294,7 +294,7 @@
     ]
   },
   {
-    "name": "Elbesilber",
+    "shopTitle": "Elbesilber",
     "latitude": 52.52317,
     "longitude": 13.4092,
     "address": "Rosa-Luxemburg-Straße 2, 10178 Berlin, Deutschland",
@@ -343,7 +343,7 @@
     ]
   },
   {
-    "name": "Modoma",
+    "shopTitle": "Modoma",
     "latitude": 52.52328,
     "longitude": 13.40823,
     "address": "Dircksenstraße 37, 10178 Berlin, Deutschland",
@@ -392,7 +392,7 @@
     ]
   },
   {
-    "name": "THAI OUTSIDE",
+    "shopTitle": "THAI OUTSIDE",
     "latitude": 52.52334,
     "longitude": 13.40819,
     "address": "Dircksenstraße 37, 10178 Berlin, Deutschland",
@@ -441,7 +441,7 @@
     ]
   },
   {
-    "name": "Yolo Frozen Yogurt",
+    "shopTitle": "Yolo Frozen Yogurt",
     "latitude": 52.52427,
     "longitude": 13.40797,
     "address": "Münzstraße 11C, 10178 Berlin, Deutschland",
@@ -490,7 +490,7 @@
     ]
   },
   {
-    "name": "Restaurant Yoga",
+    "shopTitle": "Restaurant Yoga",
     "latitude": 52.52375,
     "longitude": 13.40714,
     "address": "Rochstraße 5, 10178 Berlin, Deutschland",
@@ -539,7 +539,7 @@
     ]
   },
   {
-    "name": "Café Magenta",
+    "shopTitle": "Café Magenta",
     "latitude": 52.52438,
     "longitude": 13.40884,
     "address": "Münzstraße 8, 10178 Berlin, Deutschland",
@@ -588,7 +588,7 @@
     ]
   },
   {
-    "name": "Mikita",
+    "shopTitle": "Mikita",
     "latitude": 52.52686,
     "longitude": 13.40773,
     "address": "Alte Schönhauser Str. 13, 10119 Berlin, Deutschland",
@@ -637,7 +637,7 @@
     ]
   },
   {
-    "name": "Caffee Nashorn",
+    "shopTitle": "Caffee Nashorn",
     "latitude": 52.52667,
     "longitude": 13.40762,
     "address": "Alte Schönhauser Str. 14-15, 10119 Berlin, Deutschland",
@@ -686,7 +686,7 @@
     ]
   },
   {
-    "name": "Monsieur Json",
+    "shopTitle": "Monsieur Json",
     "latitude": 52.52659,
     "longitude": 13.40786,
     "address": "Alte Schönhauser Str. 46, 10119 Berlin, Deutschland",
@@ -735,7 +735,7 @@
     ]
   },
   {
-    "name": "Cuore Da Roma",
+    "shopTitle": "Cuore Da Roma",
     "latitude": 52.52661,
     "longitude": 13.40851,
     "address": "Max-Beer-Straße 33, 10119 Berlin, Deutschland",
@@ -784,7 +784,7 @@
     ]
   },
   {
-    "name": "L'Ami Kalk",
+    "shopTitle": "L'Ami Kalk",
     "latitude": 52.52637,
     "longitude": 13.40847,
     "address": "Max-Beer-Straße 29, 10119 Berlin, Deutschland",
@@ -833,7 +833,7 @@
     ]
   },
   {
-    "name": "DE PHO",
+    "shopTitle": "DE PHO",
     "latitude": 52.52682,
     "longitude": 13.40865,
     "address": "Max-Beer-Straße 37, 10119 Berlin, Deutschland",
@@ -882,7 +882,7 @@
     ]
   },
   {
-    "name": "Charles Restaurant",
+    "shopTitle": "Charles Restaurant",
     "latitude": 52.52446,
     "longitude": 13.40962,
     "address": "Rosa-Luxemburg-Straße 9-11, 10178 Berlin, Deutschland",
@@ -931,7 +931,7 @@
     ]
   },
   {
-    "name": "Kroshnek",
+    "shopTitle": "Kroshnek",
     "latitude": 52.52508,
     "longitude": 13.41012,
     "address": "Rosa-Luxemburg-Straße 17, 10178 Berlin, Deutschland",
@@ -980,7 +980,7 @@
     ]
   },
   {
-    "name": "Kiez Döner",
+    "shopTitle": "Kiez Döner",
     "latitude": 52.52791,
     "longitude": 13.41009,
     "address": "Rosa-Luxemburg-Straße 49, 10178 Berlin, Deutschland",
@@ -1029,7 +1029,7 @@
     ]
   },
   {
-    "name": "Shalala",
+    "shopTitle": "Shalala",
     "latitude": 52.52554,
     "longitude": 13.40795,
     "address": "Max-Beer-Straße 13, 10119 Berlin, Deutschland",
@@ -1078,7 +1078,7 @@
     ]
   },
   {
-    "name": "James Bondy Brooks",
+    "shopTitle": "James Bondy Brooks",
     "latitude": 52.52581,
     "longitude": 13.40734,
     "address": "Alte Schönhauser Str. 36, 10119 Berlin, Deutschland",
@@ -1127,7 +1127,7 @@
     ]
   },
   {
-    "name": "Kaffeemotte",
+    "shopTitle": "Kaffeemotte",
     "latitude": 52.52521,
     "longitude": 13.4061,
     "address": "Weinmeisterstraße 9A, 10178 Berlin, Deutschland",
@@ -1176,7 +1176,7 @@
     ]
   },
   {
-    "name": "The Palace",
+    "shopTitle": "The Palace",
     "latitude": 52.52554,
     "longitude": 13.41259,
     "address": "Hirtenstraße 4, 10178 Berlin, Deutschland",
@@ -1225,7 +1225,7 @@
     ]
   },
   {
-    "name": "Der junge Fritz",
+    "shopTitle": "Der junge Fritz",
     "latitude": 52.52501,
     "longitude": 13.41281,
     "address": "Karl-Liebknecht-Str. 29, 10178 Berlin, Deutschland",
@@ -1274,7 +1274,7 @@
     ]
   },
   {
-    "name": "Motte Lebensmittel",
+    "shopTitle": "Motte Lebensmittel",
     "latitude": 52.52423,
     "longitude": 13.4074,
     "address": "Rochstraße 2, 10178 Berlin, Deutschland",
@@ -1323,7 +1323,7 @@
     ]
   },
   {
-    "name": "Modoma 2",
+    "shopTitle": "Modoma 2",
     "latitude": 52.52339,
     "longitude": 13.4078,
     "address": "Dircksenstraße 37-38, 10178 Berlin, Deutschland",
@@ -1372,7 +1372,7 @@
     ]
   },
   {
-    "name": "King Kong",
+    "shopTitle": "King Kong",
     "latitude": 52.52512,
     "longitude": 13.41028,
     "address": "Rosa-Luxemburg-Straße 17, 10178 Berlin, Deutschland",
