@@ -1,0 +1,14 @@
+extends layouts/default.pug
+
+block content
+    .container
+        ul
+            li: p() example file access
+            li: p() title= #{shops[0].shopTitle}
+            li: p() latitude= #{shops[0].latitude}
+            li: p() longitude= #{shops[0].longitude}
+            li: p() description= #{shops[0].description}
+            li: p() ######
+            li: p() title= #{shops[1].shopTitle}
+            li: p() description= #{shops[1].description}
+            li: p() ...

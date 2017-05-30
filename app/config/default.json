@@ -12,7 +12,7 @@
       "port": 5984,
       "database": "foodlane",
       "sampleData": true,
-      "initSampleDataEverytime": true
+      "initSampleDataEverytime": false
     },
     "authConfig": {
       "secret": "mysecret",

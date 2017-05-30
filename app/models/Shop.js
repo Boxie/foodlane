@@ -1,5 +1,5 @@
 /**
- * Created by Lukas on 30.04.17.
+ * Created by daniel.mueller on 27.05.17.
  */
 var dbHandle = require("../helpers/database");
 var couchDBModel = require('../middleware/couchdb-model');
@@ -7,40 +7,24 @@ var extend = require('extend');
 
 var Shop = couchDBModel(dbHandle, {
     views: [
-        '_design/users/_view/by_credentials',
-        '_design/users/_view/by_username',
-        '_design/users/_view/by_email'
+        '_design/shops/_view/by_shopname'
     ],
     constraints: {
-        username: {
-            presence: true,
-            exclusion: {
-                within: ["nicklas"],
-                message: "'%{value}' is not allowed"
-            }
-        },
-        password: {
-            presence: true,
-            length: {
-                minimum: 6,
-                message: "must be at least 6 characters"
-            }
+        shopTitle: {
+            presence: true
         }
     }
 });
 
 // called if created or find
-User.instanceConstructor = function (model, data) {
+Shop.instanceConstructor = function (model, data) {
     couchDBModel.Instance.call(this, model, data);
     // Instance constructor already applied all field in 'data' to 'this'.
-    this.type = "user";
+    this.type = "shop";
 };
 
 // function on use
-extend(User.instanceConstructor.prototype, couchDBModel.Instance.prototype, {
-    checkPassword: function(password) {
-        return this.password === password;
-    }
+extend(Shop.instanceConstructor.prototype, couchDBModel.Instance.prototype, {
 });
 
-module.exports = User;
+module.exports = Shop;

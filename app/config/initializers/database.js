@@ -9,83 +9,116 @@ var dbAddress = dbConfig.protocol + '://' + dbConfig.username + ':' + dbConfig.p
 
 var nano = require('nano')(dbAddress);
 
-function createViews(db){
+function createViewsForUsers(db) {
     db.insert(
-        { "views":
-            { "by_username":
-                { "map":
-                    function(doc) {
-                        if(doc.type === "user") {
+        {
+            "views": {
+                "by_username": {
+                    "map": function (doc) {
+                        if (doc.type === "user") {
                             emit([doc.username], doc);
                         }
                     }
                 },
                 "by_email": {
-                    "map":
-                        function(doc) {
-                            if(doc.type === "user") {
-                                emit([doc.email], doc);
-                            }
+                    "map": function (doc) {
+                        if (doc.type === "user") {
+                            emit([doc.email], doc);
                         }
+                    }
                 },
                 "by_credentials": {
-                    "map":
-                        function(doc) {
-                            if(doc.type === "user") {
-                                emit([doc.username,doc.password], doc);
-                            }
+                    "map": function (doc) {
+                        if (doc.type === "user") {
+                            emit([doc.username, doc.password], doc);
                         }
-                },
+                    }
+                }
             }
         }, '_design/users'
-
     );
 }
 
-function setupDatabase(){
-    nano.db.create(dbConfig.database , function (err, cb) {
+function createViewsForShops(db) {
+    db.insert(
+        {
+            "views": {
+                "by_shopTitle": {
+                    "map": function (doc) {
+                        if (doc.type === "shop") {
+                            emit([doc.shopTitle], doc);
+                        }
+                    }
+                },
+                "by_shopTitleAndOnlySearchData": {
+                    "map": function (doc) {
+                        if (doc.type === "shop") {
+                            emit([doc.shopTitle], {
+                                _id: doc._id,
+                                shopTitle: doc.shopTitle,
+                                latitude: doc.latitude,
+                                longitude: doc.longitude,
+                                description: doc.description
+                            });
+                        }
+                    }
+                }
+            }
+        }, '_design/shops'
+    );
+}
+
+function setupDatabase() {
+    nano.db.create(dbConfig.database, function (err, cb) {
 
         // on error while creating
-        if(err){
-            logger.error('[DATABASE] Failed to create Database \"' + dbConfig.database +"\"");
+        if (err) {
+            logger.error('[DATABASE] Failed to create Database \"' + dbConfig.database + "\"");
         }
 
         // created Database successfully
-        logger.info('[DATABASE] Created database \"' + dbConfig.database +"\" SUCCESSFULLY");
+        logger.info('[DATABASE] Created database \"' + dbConfig.database + "\" SUCCESSFULLY");
 
         // Generate sample Data
 
-        if(dbConfig.sampleData){
+        if (dbConfig.sampleData) {
             require('./sampleData/dbSampleData')(cb);
         }
 
-        createViews(nano.db.use(dbConfig.database));
+        createViewsForUsers(nano.db.use(dbConfig.database));
+        createViewsForShops(nano.db.use(dbConfig.database));
 
     });
 }
-module.exports = function(cb) {
+module.exports = function (cb) {
     'use strict';
     // Initialize the component here then call the callback
     // More logic
 
     logger.info("[DATABASE] Initialize Database");
 
-    nano.db.list(function(err, body) {
+    nano.db.list(function (err, body) {
 
-        if(err){
+        if (err) {
             logger.error("[FATAL] Failed to connect to Database");
             return;
         }
 
         var foundDatabase = false;
         // body is an array
-        body.forEach(function(db){
-            if(db === dbConfig.database){
+        body.forEach(function (db) {
+            if (db === dbConfig.database) {
+                logger.info('[DATABASE] Database FOUND');
                 foundDatabase = true;
+                if (dbConfig.initSampleDataEverytime) {
+                    nano.db.destroy(db);
+                    logger.info('[DATABASE] Database DESTROYED');
+                    foundDatabase = false;
+                }
             }
         });
 
-        if(!foundDatabase){
+        if (!foundDatabase) {
             setupDatabase();
         }
     });
