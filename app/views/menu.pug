@@ -11,7 +11,7 @@ block content
 		br
 		h5 Menu
 		table.highlight
-			thead
+			thead 
 				tr
 					th Name
 					th Item Price
@@ -21,12 +21,41 @@ block content
 						td #{val.name}
 						td(id=index, style='position: absolute;') 
 							span(id=index+'price', style='display: block') #{val.price}
-							a.btn-flat.waves-effect.waves.light(id=index+'add', style='display: none; bottom: 8px;') Add
+							if(authenticated)
+								a.btn-flat.waves-effect.waves.light(id=index+'add', style='display: none; bottom: 8px;')
+									i.material-icons add_shopping_cart
+
+		if(authenticated)
+			a.btn-floating.btn-large.waves-effect.waves-light(id='cart', style='position: fixed; bottom: 5%; right: 12%;', href="/cart")
+				i.large.material-icons shopping_cart
 
 block scripts
-	each val, index in shop.items
-		script.
-			$('##{index}').hover(function(){
-				$('##{index}price').toggle();
-				$('##{index}add').toggle();
-			});
+	if(authenticated)	
+		each val, index in shop.items
+			script.
+				$('##{index}').hover(function(){
+					$('##{index}price').toggle();
+					$('##{index}add').toggle();
+				});
+				$('##{index}add').click(function(){
+					$.ajax({
+						url : "/cart",
+						type : "post",
+						data : {
+							itemname : '#{val.name}',
+							itemprice : '#{val.price}'
+						},
+						error : function(data, error, text){
+							swal({
+								title : "Something went wrong.",
+								type : "error",
+								showConfirmButton : false,
+								allowOutsideClick : true,
+								timer : 2000
+							});
+						},
+						success : function (data, textStatus, jqHXT){
+							Materialize.toast('Item added', 2000)
+						}
+					});
+				});

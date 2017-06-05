@@ -1,0 +1,19 @@
+extends layouts/default.pug
+
+block variables
+	- var authenticated = authstate
+
+block content
+	.container
+		if cart
+			table.highlight
+				thead 
+					tr
+						th Name
+						th Item Price
+				tbody
+					each val, index in cart
+						tr
+							td #{val.itemname}
+							td #{val.itemprice}
+								i.material-icons(id = '#{index}') clear

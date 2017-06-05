@@ -40,7 +40,7 @@ module.exports = function (router, passport) {
                     console.log(user.username + ' just logged in ' + req.isAuthenticated());
                     req.session.user_id = req.user._id;
 
-                    res.send({redirect: '/profile'});
+                    res.sendStatus(200);
                 });
 
             })(req, res, next);

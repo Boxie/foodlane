@@ -38,7 +38,14 @@ script.
           });
         },
         success : function (data, textStatus, jqHXT){
-          window.location.replace(data.redirect);
+          swal({
+              title : "Succsessfull Login",
+              type : "success",
+              showConfirmButton : false,
+              allowOutsideClick : true,
+              timer : 2000
+          });
+          location.reload();
         } 
     });
   });

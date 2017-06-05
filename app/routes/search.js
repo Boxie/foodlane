@@ -30,8 +30,10 @@ module.exports = function (router) {
                         "shop": shop
                     });
                 } else {
-                    res.render("noresults");
+                    res.render("noresults", {
+                        "authstate": req.isAuthenticated()
+                    });
                 }
             })
-        });
+        })
 };
