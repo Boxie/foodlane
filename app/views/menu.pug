@@ -1,0 +1,32 @@
+extends layouts/default.pug
+
+block variables
+	- var authenticated = authstate
+
+block content
+	.container
+		h4 #{shop.shopTitle}
+		p #{shop.address}
+		.chip #{shop.description}
+		br
+		h5 Menu
+		table.highlight
+			thead
+				tr
+					th Name
+					th Item Price
+			tbody
+				each val, index in shop.items
+					tr
+						td #{val.name}
+						td(id=index, style='position: absolute;') 
+							span(id=index+'price', style='display: block') #{val.price}
+							a.btn-flat.waves-effect.waves.light(id=index+'add', style='display: none; bottom: 8px;') Add
+
+block scripts
+	each val, index in shop.items
+		script.
+			$('##{index}').hover(function(){
+				$('##{index}price').toggle();
+				$('##{index}add').toggle();
+			});

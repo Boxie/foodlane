@@ -15,7 +15,23 @@ module.exports = function (router) {
                     res.render("results", {
                         "shops": shops
                     });
+                } else {
+                    res.render("noresults");
                 }
             });
+        });
+
+    router.route('/shop/:shopID')
+        .get(function(req, res, next){
+            shop.getShopByID(req.params.shopID, function(err, shop){
+                if (!err) {
+                    res.render("menu", {
+                        "authstate": req.isAuthenticated(),
+                        "shop": shop
+                    });
+                } else {
+                    res.render("noresults");
+                }
+            })
         });
 };

@@ -21,10 +21,20 @@ module.exports = {
     getAllShops: function (cb) {
         Shop.findManyByView("_design/shops/_view/by_shopTitleAndOnlySearchData", "", function (err, doc) {
             if (!err) {
-                cb(null, doc)
+                cb(null, doc);
             } else {
                 cb(err, null);
             }
-        })
+        });
+    },
+
+    getShopByID: function(id, cb){
+        Shop.findOneByID(id, function(err, doc){
+            if(!err) {
+                cb (null,doc);
+            } else {
+                cb (err, null);
+            }
+        });
     }
 };
