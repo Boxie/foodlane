@@ -6,8 +6,6 @@ var checkCart = function(cart, data, cb){
 			return;
 		}
 		for (i = 0; i<cart.items.length; i++){
-			console.log(cart.items[i].name);
-			console.log(data.item.name);
 			if (cart.items[i].name == data.item.name){
 				cb(null, true, i);
 				return;
