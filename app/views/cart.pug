@@ -6,14 +6,89 @@ block variables
 block content
 	.container
 		if cart
-			table.highlight
-				thead 
-					tr
-						th Name
-						th Item Price
-				tbody
-					each val, index in cart
+			h2 #{cart.shop.name}
+			p #{cart.shop.id}
+				table.highlight
+					thead 
 						tr
-							td #{val.itemname}
-							td #{val.itemprice}
-								i.material-icons(id = '#{index}') clear
+							th Name
+							th Amount
+							th Item Price
+					tbody
+						each val, index in cart.items
+							tr
+								td #{val.name}
+								td #{val.amount}
+								td #{val.price}
+									a.btn-flat.waves-effect.waves-light.right(id=index+'clear')
+										i.material-icons clear
+				a.btn-large.waves-effect.waves-light(id='buy') Order now
+					i.material-icons.left room_service
+
+block ajax_scripts
+	script.
+		var json = {
+			mode : "save",
+		}
+		$('#buy').click(function(){
+			$.ajax({
+					url : "/cart",
+					type : "post",
+					contentType : "application/json",
+					data : JSON.stringify(json#{index}),
+					error : function(data, error, text){
+						swal({
+							title : "Something went wrong.",
+							type : "error",
+							showConfirmButton : false,
+							allowOutsideClick : true,
+							timer : 2000
+						});
+					},
+					success : function (data, textStatus, jqHXT){
+						swal({
+							title : "Order placed.",
+							type : "success",
+							showConfirmButton : false,
+							allowOutsideClick : true,
+							timer : 2000
+						});
+					}
+				});
+			});
+		})
+
+	each val, index in cart.items
+		script.
+			var json#{index} = {
+					mode : "remove",
+					shop : {
+						id: '#{cart.shop.id}',
+						name : '#{cart.shop.name}'
+					},
+					item : {
+						name : '#{val.name}',
+						price : '#{val.price}'
+					}
+				}
+			$('##{index}clear').click(function(){
+				$.ajax({
+					url : "/cart",
+					type : "post",
+					contentType : "application/json",
+					data : JSON.stringify(json#{index}),
+					error : function(data, error, text){
+						swal({
+							title : "Something went wrong.",
+							type : "error",
+							showConfirmButton : false,
+							allowOutsideClick : true,
+							timer : 2000
+						});
+					},
+					success : function (data, textStatus, jqHXT){
+						Materialize.toast('Item removed', 2000)
+
+					}
+				});
+			});

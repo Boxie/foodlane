@@ -37,14 +37,23 @@ block scripts
 					$('##{index}price').toggle();
 					$('##{index}add').toggle();
 				});
+				var json#{index} = {
+					mode : "add",
+					shop : {
+						id: '#{shop._id}',
+						name : '#{shop.shopTitle}'
+					},
+					item : {
+						name : '#{val.name}',
+						price : '#{val.price}'
+					}
+				}
 				$('##{index}add').click(function(){
 					$.ajax({
 						url : "/cart",
 						type : "post",
-						data : {
-							itemname : '#{val.name}',
-							itemprice : '#{val.price}'
-						},
+						contentType : "application/json",
+						data : JSON.stringify(json#{index}),
 						error : function(data, error, text){
 							swal({
 								title : "Something went wrong.",
