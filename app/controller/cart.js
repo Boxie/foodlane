@@ -1,3 +1,5 @@
+var Order = require("../models/order");
+
 var checkCart = function(cart, data, cb){
 		if (cart.shop.id != data.shop.id){
 			cb(new Error("only one shop allowed"), null);
@@ -12,7 +14,7 @@ var checkCart = function(cart, data, cb){
 			}
 		}
 		cb(null, false, null);
-	}
+	};
 
 module.exports ={
 	openCart: function(session, data, cb){
@@ -78,5 +80,38 @@ module.exports ={
 			}
 			cb(err, null);
 		});
+	},
+
+	placeOrder: function(cart, cb){
+		var order = require('./cart');
+		var user = require('./profile');
+		
+		user.getByID(cart.user ,function(err, user){
+			if (!err){
+				var document = Order.create(order.parseDatatoOrder(cart,user.first_name+" "+user.last_name));
+				try {
+                    document.save(function (error) {
+                        cb(null, 123);
+                    });
+                } catch (error) {
+                    cb(error, null);
+                }
+			} else {
+				cb(err, null);
+			}
+		});
+	},
+
+	parseDatatoOrder: function(data, username){
+		var order = {
+			"type": "order",
+			"shop": data.shop,
+			"user": {
+				"id": data.user,
+				"name": username
+			},
+			"items": data.items
+		};
+		return order;
 	}
 }
