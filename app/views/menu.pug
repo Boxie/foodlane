@@ -9,27 +9,103 @@ block content
 		p #{shop.address}
 		.chip #{shop.description}
 		br
-		h5 Menu
-		table.highlight
-			thead 
-				tr
-					th Name
-					th Item Price
-			tbody
-				each val, index in shop.items
-					tr
-						td #{val.name}
-						td(id=index, style='position: absolute;') 
-							span(id=index+'price', style='display: block') #{val.price}
-							if(authenticated)
-								a.btn-flat.waves-effect.waves.light(id=index+'add', style='display: none; bottom: 8px;')
-									i.material-icons add_shopping_cart
-
+		.row
+			.col.s12
+				ul.tabs
+					li.tab
+						a.active(href='#menu') Menu
+					li.tab
+						a(href='#pending') Pending Orders
+					li.tab
+						a(href='#orders') All Orders
+			div.col.s12(id='menu')
+				table.highlight
+					thead 
+						tr
+							th Name
+							th Item Price
+					tbody
+						each val, index in shop.items
+							tr
+								td #{val.name}
+								td(id=index, style='position: absolute;') 
+									span(id=index+'price', style='display: block') #{val.price}
+									if(authenticated)
+										a.btn-flat.waves-effect.waves.light(id=index+'add', style='display: none; bottom: 8px;')
+											i.material-icons add_shopping_cart        	
+			div.col.s12(id='pending')
+				if pending
+					table
+						thead
+							tr
+								th Shop
+								th Status
+								th.right Date
+							each cart, index in pending
+								table
+									thead
+										tr(id=index+'plabel')
+											th #{cart.user.name}
+											th #{cart.status}
+											th.right #{cart.timestamp}
+										tr(id=index+'pelabel', style='display: none;')
+											th Item
+											th Amount
+											th Price
+									tbody(id=index+'pcontent', style='display: none;')
+										each item in cart.items
+											tr
+												td #{item.name}
+												td #{item.amount}
+												td #{item.price}
+				else
+					h5 No pending orders
+			div.col.s12(id='orders')
+				if orders
+					table
+						thead
+							tr
+								th Shop
+								th Status
+								th.right Date
+							each cart, index in pending
+								table
+									thead
+										tr(id=index+'olabel')
+											th #{cart.user.name}
+											th #{cart.status}
+											th.right #{cart.timestamp}
+										tr(id=index+'oelabel', style='display: none;')
+											th Item
+											th Amount
+											th Price
+									tbody(id=index+'ocontent', style='display: none;')
+										each item in cart.items
+											tr
+												td #{item.name}
+												td #{item.amount}
+												td #{item.price}
+				else
+					h5 No orders
 		if(authenticated)
 			a.btn-floating.btn-large.waves-effect.waves-light(id='cart', style='position: fixed; bottom: 5%; right: 12%;', href="/cart")
 				i.large.material-icons shopping_cart
 
 block scripts
+	each val, index in orders
+		script.
+			$('##{index}olabel').click(function(){
+				$('##{index}oelabel').slideToggle('slow');
+				$('##{index}ocontent').slideToggle('slow');
+			}); 
+	each val, index in pending
+		script.
+			$('##{index}plabel').click(function(){
+				$('##{index}pelabel').slideToggle('slow');
+				$('##{index}pcontent').slideToggle('slow');
+			}); 
+
+block ajax_scripts
 	if(authenticated)	
 		each val, index in shop.items
 			script.

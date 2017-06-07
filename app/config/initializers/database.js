@@ -68,6 +68,43 @@ function createViewsForShops(db) {
     );
 }
 
+function createViewsForOrders(db) {
+    db.insert(
+        {
+            "views" : {
+                "by_User_all": {
+                    "map": function(doc) {
+                        if (doc.type === "order") {
+                            emit([doc.user.id], doc);
+                        }
+                    }
+                },
+                "by_User_ordered": {
+                    "map": function(doc) {
+                        if(doc.type === "order" && doc.status != "fetched") {
+                            emit([doc.user.id], doc);
+                        }
+                    }
+                },
+                "by_Shop_all": {
+                    "map": function(doc) {
+                        if (doc.type === "order") {
+                            emit([doc.shop.id], doc);
+                        }
+                    }   
+                },
+                "by_Shop_ordered": {
+                    "map": function(doc) {
+                        if(doc.type === "order" && doc.status != "fetched") {
+                            emit([doc.shop.id], doc);
+                        }
+                    }
+                }
+            }
+        }, '_design/orders'
+    );
+}
+
 function setupDatabase() {
     nano.db.create(dbConfig.database, function (err, cb) {
 
@@ -87,6 +124,7 @@ function setupDatabase() {
 
         createViewsForUsers(nano.db.use(dbConfig.database));
         createViewsForShops(nano.db.use(dbConfig.database));
+        createViewsForOrders(nano.db.use(dbConfig.database));
 
     });
 }

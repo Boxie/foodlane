@@ -4,6 +4,7 @@
 
 var pug = require('pug');
 var profile = require("../controller/profile");
+var order = require("../controller/order");
 
 module.exports = function (router, passport) {
     'use strict';
@@ -14,13 +15,37 @@ module.exports = function (router, passport) {
                 //set user to json file by id
                 profile.getByID(req.session.user_id, function (err, user) {
                     if (!err) {
-                        res.render("profile", {
-                            "authstate": req.isAuthenticated(),
-                            "user": user
+                        order.getAllforUser(req.session.user_id, function(errorders, orders){
+                            if(!errorders) {
+                                order.getPendingforUser(req.session.user_id, function(errpending, pending){
+                                    if (!errpending){
+                                        res.render("profile", {
+                                            "authstate": req.isAuthenticated(),
+                                            "user": user,
+                                            "pending": pending,
+                                            "orders": orders
+                                        });
+                                    } else {
+                                        res.render("profile", {
+                                            "authstate": req.isAuthenticated(),
+                                            "user": user,
+                                            "pending": false,
+                                            "orders": orders
+                                        });
+                                    }
+                                });
+                            } else {
+                                res.render("profile", {
+                                    "authstate": req.isAuthenticated(),
+                                    "user": user,
+                                    "pending": false,
+                                    "orders": false
+                                });
+                            }
                         });
-                        return;
+                    } else {
+                        res.redirect('/auth/login');
                     }
-                    res.redirect('/auth/login');
                 });
             } else {
                 res.redirect('/auth/register');

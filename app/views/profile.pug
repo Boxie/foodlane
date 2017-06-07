@@ -3,6 +3,7 @@ extends layouts/default.pug
 block content
     .container
         .row
+            h5 #{user._id}
             .switch.right
                 label
                     | Profile
@@ -68,6 +69,67 @@ block content
                 .row
                     .col.s12
                         button(type='submit' class='btn waves-effect waves-light right') Save
+        .row
+            .col.s12
+                ul.tabs
+                    li.tab
+                        a.active(href='#pending') Pending Orders
+                    li.tab
+                        a(href='#orders') All Orders
+            div.col.s12(id='pending')
+                if pending
+                    table
+                        thead
+                            tr
+                                th Shop
+                                th Status
+                                th.right Date
+                            each cart, index in pending
+                                table
+                                    thead
+                                        tr(id=index+'plabel')
+                                            th #{cart.shop.name}
+                                            th #{cart.status}
+                                            th.right #{cart.timestamp}
+                                        tr(id=index+'pelabel', style='display: none;')
+                                            th Item
+                                            th Amount
+                                            th Price
+                                    tbody(id=index+'pcontent', style='display: none;')
+                                        each item in cart.items
+                                            tr
+                                                td #{item.name}
+                                                td #{item.amount}
+                                                td #{item.price}
+                else
+                    h5 No pending orders
+            div.col.s12(id='orders')
+                if orders
+                    table
+                        thead
+                            tr
+                                th Shop
+                                th Status
+                                th.right Date
+                            each cart, index in pending
+                                table
+                                    thead
+                                        tr(id=index+'olabel')
+                                            th #{cart.shop.name}
+                                            th #{cart.status}
+                                            th.right #{cart.timestamp}
+                                        tr(id=index+'oelabel', style='display: none;')
+                                            th Item
+                                            th Amount
+                                            th Price
+                                    tbody(id=index+'ocontent', style='display: none;')
+                                        each item in cart.items
+                                            tr
+                                                td #{item.name}
+                                                td #{item.amount}
+                                                td #{item.price}
+                else
+                    h5 No orders
 
 
 block variables
@@ -79,6 +141,18 @@ block scripts
             $('#profile').toggle();
             $('#edit').toggle();
         });
+    each val, index in orders
+        script.
+            $('##{index}olabel').click(function(){
+                $('##{index}oelabel').slideToggle('slow');
+                $('##{index}ocontent').slideToggle('slow');
+            }); 
+    each val, index in pending
+        script.
+            $('##{index}plabel').click(function(){
+                $('##{index}pelabel').slideToggle('slow');
+                $('##{index}pcontent').slideToggle('slow');
+            }); 
 
 block ajax_scripts
     script.

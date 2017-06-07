@@ -103,7 +103,7 @@ module.exports = function (router) {
         			);
         			break;
         		case 'save':
-        			cart.placeOrder(req.session.cart, function(err, ordernumber){
+        			cart.placeOrder(req.session.cart, req.body.time, function(err, ordernumber){
         				if (!err){
         					res.status(201).send("Your Order number is: "+ordernumber);
         				} else {

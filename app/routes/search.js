@@ -3,6 +3,7 @@
  */
 var pug = require('pug');
 var shop = require("../controller/shopController");
+var order = require("../controller/order");
 
 module.exports = function (router) {
     'use strict';
@@ -25,9 +26,33 @@ module.exports = function (router) {
         .get(function(req, res, next){
             shop.getShopByID(req.params.shopID, function(err, shop){
                 if (!err) {
-                    res.render("menu", {
-                        "authstate": req.isAuthenticated(),
-                        "shop": shop
+                    order.getAllforShop(req.params.shopID, function(errorders, orders){
+                        if(!errorders) {
+                            order.getPendingforShop(req.params.shopID, function(errpending, pending){
+                                if (!errpending){
+                                    res.render("menu", {
+                                        "authstate": req.isAuthenticated(),
+                                        "shop": shop,
+                                        "pending": pending,
+                                        "orders": orders
+                                    });
+                                } else {
+                                    res.render("menu", {
+                                        "authstate": req.isAuthenticated(),
+                                        "shop": shop,
+                                        "pending": false,
+                                        "orders": orders
+                                    });
+                                }
+                            });
+                        } else {
+                            res.render("emnu", {
+                                "authstate": req.isAuthenticated(),
+                                "shop": shop,
+                                "pending": false,
+                                "orders": false
+                            });
+                        }
                     });
                 } else {
                     res.render("noresults", {

@@ -80,13 +80,13 @@ module.exports ={
 		});
 	},
 
-	placeOrder: function(cart, cb){
+	placeOrder: function(cart, time, cb){
 		var order = require('./cart');
 		var user = require('./profile');
 		
 		user.getByID(cart.user ,function(err, user){
 			if (!err){
-				var document = Order.create(order.parseDatatoOrder(cart,user.first_name+" "+user.last_name));
+				var document = Order.create(order.parseDatatoOrder(cart, user.first_name+" "+user.last_name, time));
 				try {
                     document.save(function (error) {
                         cb(null, 123);
@@ -100,15 +100,18 @@ module.exports ={
 		});
 	},
 
-	parseDatatoOrder: function(data, username){
+	parseDatatoOrder: function(data, username, time){
 		var order = {
+			"timestamp": Date(),
 			"type": "order",
 			"shop": data.shop,
 			"user": {
 				"id": data.user,
 				"name": username
 			},
-			"items": data.items
+			"items": data.items,
+			"status": "ordered",
+			"fetchtime": time
 		};
 		return order;
 	}
