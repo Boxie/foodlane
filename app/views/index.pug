@@ -1,0 +1,19 @@
+extends layouts/default.pug
+
+block variables
+	//this will load the accesible shops nearby
+	var shop = require('../controller/shopController')	
+
+block content
+	ul.col(style='list-style-type: none; width: 380px; z-index:2')
+		each resto in shop.getAllShops()
+			li.card('(click)'='')
+				h4.card-title = resto.shopTitle
+				p.card-content = resto.desc
+				// p = distance() //calculate, need to figure this out. 
+		else
+			li Es wurden leider keine Restaurants gefunden.
+	include map.pug
+	
+	
+block scripts
