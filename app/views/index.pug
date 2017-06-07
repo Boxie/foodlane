@@ -1,19 +1,23 @@
 extends layouts/default.pug
 
 block variables
-	//this will load the accesible shops nearby
-	var shop = require('../controller/shopController')	
 
 block content
-	ul.col(style='list-style-type: none; width: 380px; z-index:2')
-		each resto in shop.getAllShops()
-			li.card('(click)'='')
-				h4.card-title = resto.shopTitle
-				p.card-content = resto.desc
-				// p = distance() //calculate, need to figure this out. 
+	ul.col(style='list-style-type: none; width:320px; z-index:2; position: relativee;')
+		each resto in shops
+			li.card
+				a(href='search/shop/#{shop._id}')
+					.card-content
+						h4.card-title= resto.shopTitle
+						p.card-content= resto.desc
+						// p = distance() //calculate, need to figure this out. 
 		else
-			li Es wurden leider keine Restaurants gefunden.
-	include map.pug
-	
+			li.card 
+				.card-content Es wurden leider keine Restaurants gefunden.
+	//include map.pug
+	doctype html
+	.container(id='map' style='position: relative; height:100%; width:100%; z-index:1;')
+		script(src='/js/initMap.js')
+		script(async defer src='https://maps.googleapis.com/maps/api/js?AIzaSyDo4VFphhmtH6Y4JbBJDh9hE76fCPAOlp4&callback=initMap')
 	
 block scripts
