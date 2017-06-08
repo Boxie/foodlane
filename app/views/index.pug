@@ -3,10 +3,10 @@ extends layouts/default.pug
 block variables
 
 block content
-	ul.col(style='list-style-type: none; width:320px; z-index:2; position: relativee;')
+	ul.col(style='list-style-type: none; width:320px; z-index:2; position: relative;')
 		each resto in shops
 			li.card
-				a(href='search/shop/#{shop._id}')
+				a(href='search/shop/' + resto._id)
 					.card-content
 						h4.card-title= resto.shopTitle
 						p.card-content= resto.desc
@@ -16,8 +16,33 @@ block content
 				.card-content Es wurden leider keine Restaurants gefunden.
 	//include map.pug
 	doctype html
-	.container(id='map' style='position: relative; height:100%; width:100%; z-index:1;')
-		script(src='/js/initMap.js')
-		script(async defer src='https://maps.googleapis.com/maps/api/js?AIzaSyDo4VFphhmtH6Y4JbBJDh9hE76fCPAOlp4&callback=initMap')
+	#map(style='position: fixed !important; height:100%; width:100%; z-index:1;')
+		script.
+			function initMap(){
+				var mitte = {lat: 52.524, lng: 13.404};
+				var map = new google.maps.Map(document.getElementById('map'), {
+					zoom: 15,
+					center: mitte,
+					mapTypeControl: false,
+					zoomControl: true,
+					zoomControlOptions: { 
+						position: google.maps.ControlPosition.RIGHT_CENTER
+					},
+					scaleControl: true,
+					streetViewControl: true,
+					streetViewControlOptions: {
+						position: google.maps.ControlPosition.RIGHT_CENTER
+					}
+				});
+				var marker = new google.maps.Marker({
+					position: mitte,
+					map: map
+				});
+			}
+		script.
+			function placeMarker(){
+				
+			}
+		script(async defer src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDo4VFphhmtH6Y4JbBJDh9hE76fCPAOlp4&callback=initMap')
 	
 block scripts

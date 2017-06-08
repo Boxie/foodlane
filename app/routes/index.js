@@ -29,7 +29,8 @@ module.exports = function (app, passport) {
         res.status(404).render("index", {
             "authstate": req.isAuthenticated(),
 	    "shops": [{shopTitle: 'Pseudo-Roccos', desc: 'vernünftje Pizza'},
-		 {shopTitle:'Findburger'}, {shopTitle:'Detlefs'}, {shopTitle:'Awesome Sausage'}, {shopTitle:'Fett-Börger'}, {shopTitle:'El Pollo Loco'}, {shopTitle:'zur Kartoffel'}]
+		 {shopTitle:'Findburger'}, {shopTitle:'Detlefs'}, {shopTitle:'Awesome Sausage'}, {shopTitle:'Fett-Börger'}, {shopTitle:'El Pollo Loco'}, {shopTitle:'zur Kartoffel'}],
+	    "focus": { lat: 51.5242, lng: 13.4042 }
         });
     });
 
