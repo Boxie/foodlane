@@ -14,35 +14,39 @@ block content
 		else
 			li.card 
 				.card-content Es wurden leider keine Restaurants gefunden.
-	//include map.pug
 	doctype html
-	#map(style='position: fixed !important; height:100%; width:100%; z-index:1;')
-		script.
-			function initMap(){
-				var mitte = {lat: 52.524, lng: 13.404};
-				var map = new google.maps.Map(document.getElementById('map'), {
-					zoom: 15,
-					center: mitte,
-					mapTypeControl: false,
-					zoomControl: true,
-					zoomControlOptions: { 
-						position: google.maps.ControlPosition.RIGHT_CENTER
-					},
-					scaleControl: true,
-					streetViewControl: true,
-					streetViewControlOptions: {
-						position: google.maps.ControlPosition.RIGHT_CENTER
-					}
-				});
-				var marker = new google.maps.Marker({
-					position: mitte,
-					map: map
-				});
-			}
-		script.
-			function placeMarker(){
-				
-			}
+	style.
+		#map {position: fixed !important; height:100%; width:100%; z-index: 0 !important; top:0}
+	#map
+		script function initMap(){
+			|var mitte = {lat: 52.5255, lng: 13.4075};
+			|var map = new google.maps.Map(document.getElementById('map'), {
+			|	zoom: 17,
+			|	center: mitte,
+			|	mapTypeControl: false,
+			|	zoomControl: true,
+			|	zoomControlOptions: { 
+			|		position: google.maps.ControlPosition.RIGHT_CENTER
+			|	},
+			|	scaleControl: true,
+			|	streetViewControl: true,
+			|	streetViewControlOptions: {
+			|		position: google.maps.ControlPosition.RIGHT_CENTER
+			|	}
+			|});
+			each place in shops
+				|var marker = new google.maps.Marker({
+				|	position: {lat: #{place.latitude}, lng: #{place.longitude} },
+				|	map: map
+				|});
+			|};
+		//- script function drawMarkers(map){
+			each place in shops
+				| var marker = new google.maps.Marker({
+				| position: {lat: place.latitude, lng: place.longitude}
+				| map: map
+				| });
+			|};
 		script(async defer src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDo4VFphhmtH6Y4JbBJDh9hE76fCPAOlp4&callback=initMap')
-	
+
 block scripts
