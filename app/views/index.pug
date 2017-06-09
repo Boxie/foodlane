@@ -5,19 +5,25 @@ block variables
 block content
 	ul.col(style='list-style-type: none; width:320px; z-index:2; position: relative;')
 		each resto in shops
-			li.card
-				a(href='search/shop/' + resto._id)
+			a(href='search/shop/' + resto._id)
+				li.card(id= resto._id)
 					.card-content
 						h4.card-title= resto.shopTitle
-						p.card-content= resto.desc
-						// p = distance() //calculate, need to figure this out. 
+						p.card-content= resto.description
+						//- p = distance() //calculate, need to figure this out. 
 		else
 			li.card 
 				.card-content Es wurden leider keine Restaurants gefunden.
+	#map
 	doctype html
 	style.
+		html {min-height:100vh;}
+		header, footer {display: block; width:100%; z-index:3;}
+		header {position: fixed; top:0;}
+		footer {position:relative;}
+		ul.col {padding-top:70px; list-style-type: none; width: 20em; z-index: 1; position: relative;}
 		#map {position: fixed !important; height:100%; width:100%; z-index: 0 !important; top:0}
-	#map
+block scripts
 		script function initMap(){
 			|var mitte = {lat: 52.5255, lng: 13.4075};
 			|var map = new google.maps.Map(document.getElementById('map'), {
@@ -40,13 +46,4 @@ block content
 				|	map: map
 				|});
 			|};
-		//- script function drawMarkers(map){
-			each place in shops
-				| var marker = new google.maps.Marker({
-				| position: {lat: place.latitude, lng: place.longitude}
-				| map: map
-				| });
-			|};
 		script(async defer src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDo4VFphhmtH6Y4JbBJDh9hE76fCPAOlp4&callback=initMap')
-
-block scripts
