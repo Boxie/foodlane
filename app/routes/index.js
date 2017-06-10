@@ -6,6 +6,7 @@
 var changeCase = require('change-case');
 var express = require('express');
 var routes = require('require-dir')();
+var shop = require('../controller/shopController');
 
 module.exports = function (app, passport) {
     'use strict';
@@ -21,13 +22,18 @@ module.exports = function (app, passport) {
 
         // Add router to the speficied route name in the app
         app.use('/' + changeCase.paramCase(routeName), router);
+
     });
 
     app.use(function (req, res, next) {
-        res.status(404).render("missing_page", {
-            "authstate": req.isAuthenticated()
+        shop.getAllShops(function(err, shops){
+            res.render("index", {
+                "authstate": req.isAuthenticated(),
+                "shops": shops
+            });
         });
     });
 
 };
+
 
