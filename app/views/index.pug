@@ -4,16 +4,19 @@ block variables
 
 block content
 	ul.col(style='list-style-type: none; width:320px; z-index:2; position: relative;')
-		each resto in shops
-			a(href='search/shop/' + resto._id)
-				li.card(id= resto._id)
+		- var labelnumber = 1
+		each shop in shops
+			a(href='search/shop/' + shop._id)
+				li.card(id= shop._id)
 					.card-content
-						h4.card-title= resto.shopTitle
-						p.card-content= resto.description
-						//- p = distance() //calculate, need to figure this out. 
+						h4.card-title #{labelnumber}.  #{shop.shopTitle}
+						p.card-content= shop.description
+						//- p = distance() //calculate, need to figure this out.
+			- labelnumber++
 		else
 			li.card 
 				.card-content Es wurden leider keine Restaurants gefunden.
+
 	#map
 	doctype html
 	style.
@@ -26,7 +29,8 @@ block content
 block scripts
 		script function initMap(){
 			|var mitte = {lat: 52.5255, lng: 13.4075};
-			|var mapstyle = [{"featureType": "poi","elementType": "labels","stylers": [{"visibility": "off"}]}]
+			|var mapstyle = [{"featureType": "poi","elementType": "labels","stylers": [{"visibility": "off"}]}];
+			|var labelnumber = 1;
 			|var map = new google.maps.Map(document.getElementById('map'), {
 			|	mapTypeControlOptions: {
 			|		mapTypeIds: ['mapstyle']},
@@ -41,10 +45,12 @@ block scripts
 			|	streetViewControl: false,
 			|});
 			|map.set('styles', mapstyle);
-			each place in shops
+			each shop in shops
 				|var marker = new google.maps.Marker({
-				|	position: {lat: #{place.latitude}, lng: #{place.longitude} },
+				|	position: {lat: #{shop.latitude}, lng: #{shop.longitude} },
+				|	label: labelnumber.toString(),
 				|	map: map
 				|});
+				|labelnumber++;
 			|};
 		script(async defer src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDo4VFphhmtH6Y4JbBJDh9hE76fCPAOlp4&callback=initMap')
