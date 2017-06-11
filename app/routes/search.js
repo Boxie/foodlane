@@ -46,7 +46,7 @@ module.exports = function (router) {
                                 }
                             });
                         } else {
-                            res.render("emnu", {
+                            res.render("menu", {
                                 "authstate": req.isAuthenticated(),
                                 "shop": shop,
                                 "pending": false,
