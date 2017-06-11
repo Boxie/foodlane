@@ -26,7 +26,10 @@ block content
 block scripts
 		script function initMap(){
 			|var mitte = {lat: 52.5255, lng: 13.4075};
+			|var mapstyle = [{"featureType": "poi","elementType": "labels","stylers": [{"visibility": "off"}]}]
 			|var map = new google.maps.Map(document.getElementById('map'), {
+			|	mapTypeControlOptions: {
+			|		mapTypeIds: ['mapstyle']},
 			|	zoom: 17,
 			|	center: mitte,
 			|	mapTypeControl: false,
@@ -35,11 +38,9 @@ block scripts
 			|		position: google.maps.ControlPosition.RIGHT_CENTER
 			|	},
 			|	scaleControl: true,
-			|	streetViewControl: true,
-			|	streetViewControlOptions: {
-			|		position: google.maps.ControlPosition.RIGHT_CENTER
-			|	}
+			|	streetViewControl: false,
 			|});
+			|map.set('styles', mapstyle);
 			each place in shops
 				|var marker = new google.maps.Marker({
 				|	position: {lat: #{place.latitude}, lng: #{place.longitude} },
