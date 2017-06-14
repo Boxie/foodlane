@@ -89,7 +89,7 @@ module.exports ={
 				var document = Order.create(order.parseDatatoOrder(cart, user.first_name+" "+user.last_name, time));
 				try {
                     document.save(function (error) {
-                        cb(null, 123);
+                        cb(null, document);
                     });
                 } catch (error) {
                     cb(error, null);

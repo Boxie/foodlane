@@ -3,7 +3,7 @@ extends layouts/default.pug
 block content
     .container
         .row
-            h5 #{user._id}
+            h5 #{user.username}
             .switch.right
                 label
                     | Profile
@@ -72,10 +72,11 @@ block content
         .row
             .col.s12
                 ul.tabs
-                    li.tab
+                    // li.tab
                         a.active(href='#pending') Pending Orders
                     li.tab
                         a(href='#orders') All Orders
+            //-
             div.col.s12(id='pending')
                 if pending
                     table

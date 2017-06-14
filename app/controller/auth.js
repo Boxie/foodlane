@@ -108,11 +108,11 @@ module.exports = {
                     return;
                 }
                 if(size === 0){
-                    cb(null, null);
+                    cb(new Error("No such User"), null);
                     return;
                 }
 
-                cb(new Error("Found more than 1 user with same credentials."));
+                cb(new Error("Found more than 1 user with same credentials."), null);
 
             }
         })

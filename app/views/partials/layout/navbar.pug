@@ -1,34 +1,15 @@
-header(style='padding-bottom: 70px;')
+header
   nav
     .nav-wrapper
       .row.scale-transition
-        #logo.col.s1.m1
+        #logo.col.s1
           a.brand-logo.left(href='/')
             img(src='/images/brands/fetch/fetch_white.png' alt='Fetch' style='width:80px;height:70px;')
-        .col.s9.hide-on-small-only
-          form
-            .input-field
-              input#search(type='search')
-              |  
-              label.label-icon(for='search')
-                i.material-icons search
-              |  
-              i.material-icons close
-        #login_btn.col.offset-s9.s2.m2
+        #login_btn.col.offset-s9.s2
           ul.right
             li
               unless authenticated
                 a.btn.waves-light.waves-effect(href='#login') Log In
               else
                 a.btn.waves-light.waves-effect(href='/auth/logout') Log Out
-    .nav-content.hide-on-med-and-up(style='background-color: #F4882C;')
-      form
-        .input-field
-          input#search(type='search')
-          |  
-          label.label-icon(for='search')
-            i.material-icons search
-          |  
-          i.material-icons close
-
 include modal.pug

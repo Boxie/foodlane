@@ -1,6 +1,7 @@
 extends layouts/default.pug
 
 block variables
+	- var authenticated = authstate
 
 block content
 	ul.col(style='list-style-type: none; width:320px; z-index:2; position: relative;')
@@ -26,6 +27,7 @@ block content
 		footer {position:relative;}
 		ul.col {padding-top:70px; list-style-type: none; width: 20em; z-index: 1; position: relative;}
 		#map {position: fixed !important; height:100%; width:100%; z-index: 0 !important; top:0}
+
 block scripts
 		script function initMap(){
 			|var mitte = {lat: 52.5255, lng: 13.4075};

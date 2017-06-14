@@ -1,5 +1,8 @@
 extends layouts/default.pug
 
+block variables
+    - var authenticated = authstate
+
 block content
     .container
         ul

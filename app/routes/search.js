@@ -14,6 +14,7 @@ module.exports = function (router) {
             shop.getAllShops(function (err, shops) {
                 if(!err) {
                     res.render("results", {
+                        "authstate":req.isAuthenticated(),
                         "shops": shops
                     });
                 } else {

@@ -14,7 +14,7 @@ block content
 				ul.tabs
 					li.tab
 						a.active(href='#menu') Menu
-					li.tab
+					// li.tab
 						a(href='#pending') Pending Orders
 					li.tab
 						a(href='#orders') All Orders
@@ -33,7 +33,7 @@ block content
 									if(authenticated)
 										a.btn-flat.waves-effect.waves.light(id=index+'add', style='display: none; bottom: 8px;')
 											i.material-icons add_shopping_cart        	
-			div.col.s12(id='pending')
+			//- div.col.s12(id='pending')
 				if pending
 					table
 						thead

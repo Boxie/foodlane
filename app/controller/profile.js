@@ -19,17 +19,17 @@ module.exports = {
     updateData: function (id, change, cb) {
         var profile = require("./profile");
         profile.getByID(id, function (err, doc) {
-            var document = profile.checkdifferences(doc, change);
-            if (document) {
+            if (!err) {
+                var document = User.create(profile.checkdifferences(doc, change));
                 try {
                     document.save(function (error) {
-                        cb(null);
+                        cb(null, document);
                     });
                 } catch (error) {
-                    cb(error.detail);
+                    cb(error, null);
                 }
             } else {
-                cb('error');
+                cb(new Error("No such Document"), null);
             }
         })
     },

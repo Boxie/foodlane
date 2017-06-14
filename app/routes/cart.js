@@ -103,9 +103,9 @@ module.exports = function (router) {
         			);
         			break;
         		case 'save':
-        			cart.placeOrder(req.session.cart, req.body.time, function(err, ordernumber){
+        			cart.placeOrder(req.session.cart, req.body.time, function(err, order){
         				if (!err){
-        					res.status(201).send("Your Order number is: "+ordernumber);
+        					res.status(201).send("Your Order number is: "+order._id);
         				} else {
         					res.sendStatus(500);
         				}
