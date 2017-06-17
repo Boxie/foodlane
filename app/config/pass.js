@@ -37,7 +37,7 @@ module.exports = function(app, passport) {
     var lookupUser = function (username, password, done) {
         User.checkCredentials(username, password, function (error, auth_user){
             if(error){
-                done(error);
+                return done(error);
             }
             if(auth_user){
                 return done(null, auth_user);
