@@ -7,7 +7,7 @@ module.exports = function (router) {
 
     router.route('/')
     	.get(function (req, res, next){
-    		if (req.session.cart){
+    		if (req.session.cart && req.isAuthenticated()){
 	    		res.render("cart", {
 	    			"authstate" : req.isAuthenticated(),
 	    			"cart" : req.session.cart
@@ -105,6 +105,7 @@ module.exports = function (router) {
         		case 'save':
         			cart.placeOrder(req.session.cart, req.body.time, function(err, order){
         				if (!err){
+                            req.session.cart = null;
         					res.status(201).send("Your Order number is: "+order._id);
         				} else {
         					res.sendStatus(500);

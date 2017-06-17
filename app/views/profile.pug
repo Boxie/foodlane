@@ -77,33 +77,33 @@ block content
                     li.tab
                         a(href='#orders') All Orders
             //-
-            div.col.s12(id='pending')
-                if pending
-                    table
-                        thead
-                            tr
-                                th Shop
-                                th Status
-                                th.right Date
-                            each cart, index in pending
-                                table
-                                    thead
-                                        tr(id=index+'plabel')
-                                            th #{cart.shop.name}
-                                            th #{cart.status}
-                                            th.right #{cart.timestamp}
-                                        tr(id=index+'pelabel', style='display: none;')
-                                            th Item
-                                            th Amount
-                                            th Price
-                                    tbody(id=index+'pcontent', style='display: none;')
-                                        each item in cart.items
-                                            tr
-                                                td #{item.name}
-                                                td #{item.amount}
-                                                td #{item.price}
-                else
-                    h5 No pending orders
+                div.col.s12(id='pending')
+                    if pending
+                        table
+                            thead
+                                tr
+                                    th Shop
+                                    th Status
+                                    th.right Date
+                                each cart, index in pending
+                                    table
+                                        thead
+                                            tr(id=index+'plabel')
+                                                th #{cart.shop.name}
+                                                th #{cart.status}
+                                                th.right #{cart.timestamp}
+                                            tr(id=index+'pelabel', style='display: none;')
+                                                th Item
+                                                th Amount
+                                                th Price
+                                        tbody(id=index+'pcontent', style='display: none;')
+                                            each item in cart.items
+                                                tr
+                                                    td #{item.name}
+                                                    td #{item.amount}
+                                                    td #{item.price}
+                    else
+                        h5 No pending orders
             div.col.s12(id='orders')
                 if orders
                     table
