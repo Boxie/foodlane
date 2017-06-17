@@ -1,4 +1,11 @@
 header
+  ul.dropdown-content(id="navdropdown")
+    li
+      a(href='/profile') Profile
+    li
+      a(href='/auth/logout') Log Out
+    li
+      a(href='/cart') Cart
   nav
     .nav-wrapper
       .row.scale-transition
@@ -6,10 +13,13 @@ header
           a.brand-logo.left(href='/')
             img(src='/images/brands/fetch/fetch_white.png' alt='Fetch' style='width:80px;height:70px;')
         #login_btn.col.offset-s9.s2
-          ul.right
+          ul
             li
               unless authenticated
                 a.btn.waves-light.waves-effect(href='#login') Log In
               else
-                a.btn.waves-light.waves-effect(href='/auth/logout') Log Out
+                a.dropdown-button(href="#!" data-activates="navdropdown") My Account
+                  i.material-icons.right arrow_drop_down
+  script.
+    $('.dropdown-button').dropdown({hover: false});
 include modal.pug
