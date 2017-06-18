@@ -4,7 +4,7 @@
 
 ### Installation
 
-Foodlane requires [Docker](https://www.docker.com/) and [npm](https://www.npmjs.com/) to run.
+Fetch requires [Docker](https://www.docker.com/) and [npm](https://www.npmjs.com/) to run.
 
 Download the project and navigate to the project root directory.
 
@@ -13,7 +13,7 @@ $ cd app
 $ npm install
 ```
 
-After loading all project dependencies return to the project root directory, build docker-compose images and start foodlane via docker-compose
+After loading all project dependencies return to the project root directory, build docker-compose images and start fetch via docker-compose
 
 ```sh
 $ cd ..
