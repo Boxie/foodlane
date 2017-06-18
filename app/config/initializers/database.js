@@ -148,7 +148,7 @@ module.exports = function (cb) {
             if (db === dbConfig.database) {
                 logger.info('[DATABASE] Database FOUND');
                 foundDatabase = true;
-                if (dbConfig.initSampleDataEverytime) {
+                if (dbConfig.overwriteDbOnStart) {
                     nano.db.destroy(db);
                     logger.info('[DATABASE] Database DESTROYED');
                     foundDatabase = false;
